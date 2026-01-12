@@ -6,7 +6,6 @@ import deuli.newdawn.horizoncobblemonitems.item.BottleCapItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -26,10 +25,28 @@ public class HorizonCobblemonItems {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
     public static final DeferredItem<Item> GOLDEN_BOTTLE_CAP = ITEMS.register("golden_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.HP, Stats.ATTACK, Stats.DEFENCE, Stats.SPECIAL_ATTACK, Stats.SPECIAL_DEFENCE, Stats.SPEED)));
+    public static final DeferredItem<Item> HEALTH_BOTTLE_CAP = ITEMS.register("health_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.HP)));
+    public static final DeferredItem<Item> MIGHTY_BOTTLE_CAP = ITEMS.register("mighty_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.ATTACK)));
+    public static final DeferredItem<Item> TOUGH_BOTTLE_CAP = ITEMS.register("tough_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.DEFENCE)));
+    public static final DeferredItem<Item> SMART_BOTTLE_CAP = ITEMS.register("smart_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPECIAL_ATTACK)));
+    public static final DeferredItem<Item> COURAGE_BOTTLE_CAP = ITEMS.register("courage_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPECIAL_DEFENCE)));
+    public static final DeferredItem<Item> QUICK_BOTTLE_CAP = ITEMS.register("quick_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPEED)));
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.horizoncobblemonitems")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> GOLDEN_BOTTLE_CAP.get().getDefaultInstance()).displayItems((parameters, output) -> {
-        output.accept(GOLDEN_BOTTLE_CAP.get());
-    }).build());
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
+            CreativeModeTab.builder()
+                    .title(Component.translatable("itemGroup.horizoncobblemonitems"))
+                    .icon(() -> GOLDEN_BOTTLE_CAP.get().getDefaultInstance())
+                    .displayItems((parameters, output) -> {
+                        output.accept(GOLDEN_BOTTLE_CAP.get());
+                        output.accept(HEALTH_BOTTLE_CAP.get());
+                        output.accept(MIGHTY_BOTTLE_CAP.get());
+                        output.accept(TOUGH_BOTTLE_CAP.get());
+                        output.accept(SMART_BOTTLE_CAP.get());
+                        output.accept(COURAGE_BOTTLE_CAP.get());
+                        output.accept(QUICK_BOTTLE_CAP.get());
+                    })
+                    .build()
+    );
 
     public HorizonCobblemonItems(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

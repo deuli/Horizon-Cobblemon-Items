@@ -1,3 +1,10 @@
 {
-  "item.horizoncobblemonitems.golden_bottle_cap": "Golden Bottle Cap"
+  "item.horizoncobblemonitems.courage_bottle_cap": "Courage Bottle Cap",
+  "item.horizoncobblemonitems.golden_bottle_cap": "Golden Bottle Cap",
+  "item.horizoncobblemonitems.health_bottle_cap": "Health Bottle Cap",
+  "item.horizoncobblemonitems.mighty_bottle_cap": "Mighty Bottle Cap",
+  "item.horizoncobblemonitems.quick_bottle_cap": "Quick Bottle Cap",
+  "item.horizoncobblemonitems.smart_bottle_cap": "Smart Bottle Cap",
+  "item.horizoncobblemonitems.tough_bottle_cap": "Tough Bottle Cap",
+  "itemGroup.horizoncobblemonitems": "Horizon Cobblemon Items"
 }
