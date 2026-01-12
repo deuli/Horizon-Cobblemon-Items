@@ -26,6 +26,8 @@ public class HorizonCobblemonItems {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
     public static final DeferredItem<Item> GOLDEN_BOTTLE_CAP = ITEMS.register("golden_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.HP, Stats.ATTACK, Stats.DEFENCE, Stats.SPECIAL_ATTACK, Stats.SPECIAL_DEFENCE, Stats.SPEED)));
+    public static final DeferredItem<Item> VOID_BOTTLE_CAP = ITEMS.register("void_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.HP, Stats.ATTACK, Stats.DEFENCE, Stats.SPECIAL_ATTACK, Stats.SPECIAL_DEFENCE, Stats.SPEED)));
+
     public static final DeferredItem<Item> SILVER_BOTTLE_CAP = ITEMS.register("silver_bottle_cap", () -> new SilverBottleCapItem(31));
     public static final DeferredItem<Item> HEALTH_BOTTLE_CAP = ITEMS.register("health_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.HP)));
     public static final DeferredItem<Item> MIGHTY_BOTTLE_CAP = ITEMS.register("mighty_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.ATTACK)));
@@ -33,6 +35,7 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> SMART_BOTTLE_CAP = ITEMS.register("smart_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPECIAL_ATTACK)));
     public static final DeferredItem<Item> COURAGE_BOTTLE_CAP = ITEMS.register("courage_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPECIAL_DEFENCE)));
     public static final DeferredItem<Item> QUICK_BOTTLE_CAP = ITEMS.register("quick_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPEED)));
+
     public static final DeferredItem<Item> OBSIDIAN_BOTTLE_CAP = ITEMS.register("obsidian_bottle_cap", () -> new SilverBottleCapItem(0));
     public static final DeferredItem<Item> SICKLY_BOTTLE_CAP = ITEMS.register("sickly_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.HP)));
     public static final DeferredItem<Item> WEAK_BOTTLE_CAP = ITEMS.register("weak_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.ATTACK)));
@@ -47,6 +50,7 @@ public class HorizonCobblemonItems {
                     .icon(() -> GOLDEN_BOTTLE_CAP.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
                         output.accept(GOLDEN_BOTTLE_CAP.get());
+                        output.accept(VOID_BOTTLE_CAP.get());
 
                         output.accept(SILVER_BOTTLE_CAP.get());
                         output.accept(HEALTH_BOTTLE_CAP.get());
