@@ -3,6 +3,7 @@ plugins {
     id 'maven-publish'
     id 'idea'
     id 'net.neoforged.moddev' version '2.0.139'
+    id "org.jetbrains.kotlin.jvm" version "1.9.21"
 }
 
 version = mod_version
@@ -10,6 +11,20 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+
+    maven{ url "https://maven.impactdev.net/repository/development/" }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 base {
@@ -116,6 +131,11 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    implementation("com.cobblemon:neoforge:${project.cobblemon_version}")
+    implementation "maven.modrinth:kotlin-for-forge:${project.kotlin_version}"
+
+    runtimeOnly "maven.modrinth:emi:${project.emi_version}"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
