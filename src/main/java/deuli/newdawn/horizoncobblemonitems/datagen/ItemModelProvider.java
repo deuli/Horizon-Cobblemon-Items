@@ -18,5 +18,11 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(HorizonCobblemonItems.SMART_BOTTLE_CAP.get());
         basicItem(HorizonCobblemonItems.COURAGE_BOTTLE_CAP.get());
         basicItem(HorizonCobblemonItems.QUICK_BOTTLE_CAP.get());
+        basicItem(HorizonCobblemonItems.SICKLY_BOTTLE_CAP.get());
+        basicItem(HorizonCobblemonItems.WEAK_BOTTLE_CAP.get());
+        basicItem(HorizonCobblemonItems.BRITTLE_BOTTLE_CAP.get());
+        basicItem(HorizonCobblemonItems.NUMB_BOTTLE_CAP.get());
+        basicItem(HorizonCobblemonItems.COWARD_BOTTLE_CAP.get());
+        basicItem(HorizonCobblemonItems.SLOW_BOTTLE_CAP.get());
     }
 }

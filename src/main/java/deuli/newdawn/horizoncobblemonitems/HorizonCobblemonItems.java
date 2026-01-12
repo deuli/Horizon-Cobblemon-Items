@@ -31,6 +31,12 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> SMART_BOTTLE_CAP = ITEMS.register("smart_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPECIAL_ATTACK)));
     public static final DeferredItem<Item> COURAGE_BOTTLE_CAP = ITEMS.register("courage_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPECIAL_DEFENCE)));
     public static final DeferredItem<Item> QUICK_BOTTLE_CAP = ITEMS.register("quick_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.SPEED)));
+    public static final DeferredItem<Item> SICKLY_BOTTLE_CAP = ITEMS.register("sickly_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.HP)));
+    public static final DeferredItem<Item> WEAK_BOTTLE_CAP = ITEMS.register("weak_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.ATTACK)));
+    public static final DeferredItem<Item> BRITTLE_BOTTLE_CAP = ITEMS.register("brittle_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.DEFENCE)));
+    public static final DeferredItem<Item> NUMB_BOTTLE_CAP = ITEMS.register("numb_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.SPECIAL_ATTACK)));
+    public static final DeferredItem<Item> COWARD_BOTTLE_CAP = ITEMS.register("coward_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.SPECIAL_DEFENCE)));
+    public static final DeferredItem<Item> SLOW_BOTTLE_CAP = ITEMS.register("slow_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.SPEED)));
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
@@ -44,6 +50,12 @@ public class HorizonCobblemonItems {
                         output.accept(SMART_BOTTLE_CAP.get());
                         output.accept(COURAGE_BOTTLE_CAP.get());
                         output.accept(QUICK_BOTTLE_CAP.get());
+                        output.accept(SICKLY_BOTTLE_CAP.get());
+                        output.accept(WEAK_BOTTLE_CAP.get());
+                        output.accept(BRITTLE_BOTTLE_CAP.get());
+                        output.accept(NUMB_BOTTLE_CAP.get());
+                        output.accept(COWARD_BOTTLE_CAP.get());
+                        output.accept(SLOW_BOTTLE_CAP.get());
                     })
                     .build()
     );
