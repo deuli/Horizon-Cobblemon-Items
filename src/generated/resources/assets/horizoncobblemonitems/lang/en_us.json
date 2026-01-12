@@ -12,5 +12,18 @@
   "item.horizoncobblemonitems.smart_bottle_cap": "Smart Bottle Cap",
   "item.horizoncobblemonitems.tough_bottle_cap": "Tough Bottle Cap",
   "item.horizoncobblemonitems.weak_bottle_cap": "Weak Bottle Cap",
+  "item.item.horizoncobblemonitems.brittle_bottle_cap.tooltip": "Sets the Pokémon's effective Defense IV stat to 0.",
+  "item.item.horizoncobblemonitems.courage_bottle_cap.tooltip": "Sets the Pokémon's effective Special Defense IV stat to 31.",
+  "item.item.horizoncobblemonitems.coward_bottle_cap.tooltip": "Sets the Pokémon's effective Special Defense IV stat to 0.",
+  "item.item.horizoncobblemonitems.golden_bottle_cap.tooltip": "Sets all of the Pokémon's effective IV stats to 31.",
+  "item.item.horizoncobblemonitems.health_bottle_cap.tooltip": "Sets the Pokémon's effective HP IV stat to 31.",
+  "item.item.horizoncobblemonitems.mighty_bottle_cap.tooltip": "Sets the Pokémon's effective Attack IV stat to 31.",
+  "item.item.horizoncobblemonitems.numb_bottle_cap.tooltip": "Sets the Pokémon's effective Special Attack IV stat to 0.",
+  "item.item.horizoncobblemonitems.quick_bottle_cap.tooltip": "Sets the Pokémon's effective Speed IV stat to 31.",
+  "item.item.horizoncobblemonitems.sickly_bottle_cap.tooltip": "Sets the Pokémon's effective HP IV stat to 0.",
+  "item.item.horizoncobblemonitems.slow_bottle_cap.tooltip": "Sets the Pokémon's effective Speed IV stat to 0.",
+  "item.item.horizoncobblemonitems.smart_bottle_cap.tooltip": "Sets the Pokémon's effective Special Attack IV stat to 31.",
+  "item.item.horizoncobblemonitems.tough_bottle_cap.tooltip": "Sets the Pokémon's effective Defense IV stat to 31.",
+  "item.item.horizoncobblemonitems.weak_bottle_cap.tooltip": "Sets the Pokémon's effective Attack IV stat to 0.",
   "itemGroup.horizoncobblemonitems": "Horizon Cobblemon Items"
 }
