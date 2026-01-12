@@ -3,6 +3,7 @@ package deuli.newdawn.horizoncobblemonitems.item;
 import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.item.PokemonSelectingItem;
 import com.cobblemon.mod.common.api.pokemon.stats.Stat;
+import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.item.CobblemonItem;
 import com.cobblemon.mod.common.item.battle.BagItem;
@@ -13,24 +14,22 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
-public class BottleCapItem extends CobblemonItem implements PokemonSelectingItem {
+public class SilverBottleCapItem extends CobblemonItem implements PokemonSelectingItem {
     private final int ivSetAmount;
-    private final Set<Stat> targetStats;
 
-    public BottleCapItem(int ivSetAmount, Set<Stat> targetStats) {
-        super(new Item.Properties());
+    public SilverBottleCapItem(int ivSetAmount) {
+        super(new Properties());
         this.ivSetAmount = ivSetAmount;
-        this.targetStats = targetStats;
     }
 
     @Override
@@ -44,7 +43,7 @@ public class BottleCapItem extends CobblemonItem implements PokemonSelectingItem
 
     @Override
     public boolean canUseOnPokemon(@NotNull ItemStack stack, @NotNull Pokemon pokemon) {
-        return targetStats.stream().anyMatch(stat -> canChangeIV(pokemon, stat));
+        return Arrays.stream(Stats.values()).anyMatch(stat -> stat.getType() == Stat.Type.PERMANENT && canChangeIV(pokemon, stat));
     }
 
     @Override
@@ -53,11 +52,15 @@ public class BottleCapItem extends CobblemonItem implements PokemonSelectingItem
             return InteractionResultHolder.fail(itemStack);
         }
 
-        targetStats.forEach(stat -> {
-            if (canChangeIV(pokemon, stat)) {
-                pokemon.hyperTrainIV(stat, ivSetAmount);
-            }
-        });
+        ArrayList<Stat> targetStats = new ArrayList<>();
+        for (Stat stat : Stats.values()) {
+            if (stat.getType() == Stat.Type.PERMANENT && pokemon.getIvs().getEffectiveBattleIV(stat) != ivSetAmount)
+                targetStats.add(stat);
+        }
+
+        Stat stat = targetStats.get(serverPlayer.getRandom().nextInt(targetStats.size()));
+        if (canChangeIV(pokemon, stat))
+            pokemon.hyperTrainIV(stat, ivSetAmount);
 
         itemStack.consume(1, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
