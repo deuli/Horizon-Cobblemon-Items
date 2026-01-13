@@ -2,6 +2,7 @@ package deuli.newdawn.horizoncobblemonitems;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.pokemon.stats.Stats;
+import com.cobblemon.mod.common.api.riding.stats.RidingStat;
 import com.mojang.logging.LogUtils;
 import deuli.newdawn.horizoncobblemonitems.item.*;
 import net.minecraft.core.registries.Registries;
@@ -50,6 +51,13 @@ public class HorizonCobblemonItems {
 
     public static final DeferredItem<Item> ULTRA_RARE_CANDY = ITEMS.register("ultra_rare_candy", () -> new LevelItem(Cobblemon.config.getMaxPokemonLevel()));
 
+    public static final DeferredItem<Item> ULTIMATE_MAC_AND_CHEESE = ITEMS.register("ultimate_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.ACCELERATION, RidingStat.SKILL, RidingStat.SPEED, RidingStat.STAMINA, RidingStat.JUMP)));
+    public static final DeferredItem<Item> SPICY_MAC_AND_CHEESE = ITEMS.register("spicy_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.ACCELERATION)));
+    public static final DeferredItem<Item> DRY_MAC_AND_CHEESE = ITEMS.register("dry_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.SKILL)));
+    public static final DeferredItem<Item> SWEET_MAC_AND_CHEESE = ITEMS.register("sweet_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.SPEED)));
+    public static final DeferredItem<Item> SOUR_MAC_AND_CHEESE = ITEMS.register("sour_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.STAMINA)));
+    public static final DeferredItem<Item> BITTER_MAC_AND_CHEESE = ITEMS.register("bitter_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.JUMP)));
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
@@ -78,7 +86,14 @@ public class HorizonCobblemonItems {
 
                         output.accept(DEVOLUTION_SPRAY.get());
 
-                        output.accept(ULTRA_RARE_CANDY);
+                        output.accept(ULTRA_RARE_CANDY.get());
+
+                        output.accept(ULTIMATE_MAC_AND_CHEESE.get());
+                        output.accept(SPICY_MAC_AND_CHEESE.get());
+                        output.accept(DRY_MAC_AND_CHEESE.get());
+                        output.accept(SWEET_MAC_AND_CHEESE.get());
+                        output.accept(SOUR_MAC_AND_CHEESE.get());
+                        output.accept(BITTER_MAC_AND_CHEESE.get());
                     })
                     .build()
     );

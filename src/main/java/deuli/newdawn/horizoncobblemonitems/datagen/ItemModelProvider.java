@@ -33,5 +33,12 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(HorizonCobblemonItems.DEVOLUTION_SPRAY.get());
 
         basicItem(HorizonCobblemonItems.ULTRA_RARE_CANDY.get());
+
+        basicItem(HorizonCobblemonItems.ULTIMATE_MAC_AND_CHEESE.get());
+        basicItem(HorizonCobblemonItems.SPICY_MAC_AND_CHEESE.get());
+        basicItem(HorizonCobblemonItems.DRY_MAC_AND_CHEESE.get());
+        basicItem(HorizonCobblemonItems.SWEET_MAC_AND_CHEESE.get());
+        basicItem(HorizonCobblemonItems.SOUR_MAC_AND_CHEESE.get());
+        basicItem(HorizonCobblemonItems.BITTER_MAC_AND_CHEESE.get());
     }
 }

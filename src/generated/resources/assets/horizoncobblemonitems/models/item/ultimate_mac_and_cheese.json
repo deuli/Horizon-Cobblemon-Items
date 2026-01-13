@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "horizoncobblemonitems:item/ultimate_mac_and_cheese"
+  }
+}

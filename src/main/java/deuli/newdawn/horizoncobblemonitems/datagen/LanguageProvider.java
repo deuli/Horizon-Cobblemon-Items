@@ -40,6 +40,13 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
         addItem(HorizonCobblemonItems.ULTRA_RARE_CANDY, "Ultra Rare Candy");
 
+        addItem(HorizonCobblemonItems.ULTIMATE_MAC_AND_CHEESE, "Ultimate Mac and Cheese");
+        addItem(HorizonCobblemonItems.SPICY_MAC_AND_CHEESE, "Spicy Mac and Cheese");
+        addItem(HorizonCobblemonItems.DRY_MAC_AND_CHEESE, "Dry Mac and Cheese");
+        addItem(HorizonCobblemonItems.SWEET_MAC_AND_CHEESE, "Sweet Mac and Cheese");
+        addItem(HorizonCobblemonItems.SOUR_MAC_AND_CHEESE, "Sour Mac and Cheese");
+        addItem(HorizonCobblemonItems.BITTER_MAC_AND_CHEESE, "Bitter Mac and Cheese");
+
         tooltip(HorizonCobblemonItems.GOLDEN_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %1$s");
         tooltip(HorizonCobblemonItems.VOID_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %1$s");
 
@@ -64,9 +71,20 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HorizonCobblemonItems.DEVOLUTION_SPRAY, "Devolves a Pokémon into their previous evolution");
 
         tooltip(HorizonCobblemonItems.ULTRA_RARE_CANDY, "Increases a Pokémon's level to the max");
+
+        tooltip(HorizonCobblemonItems.ULTIMATE_MAC_AND_CHEESE, "Sets all of the Pokémon's riding stat to the max");
+        tooltip(HorizonCobblemonItems.SPICY_MAC_AND_CHEESE, "Sets the Pokémon's %s stat to the max");
+        tooltip(HorizonCobblemonItems.DRY_MAC_AND_CHEESE, "Sets the Pokémon's %s stat to the max");
+        tooltip(HorizonCobblemonItems.SWEET_MAC_AND_CHEESE, "Sets the Pokémon's %s stat to the max");
+        tooltip(HorizonCobblemonItems.SOUR_MAC_AND_CHEESE, "Sets the Pokémon's %s stat to the max");
+        tooltip(HorizonCobblemonItems.BITTER_MAC_AND_CHEESE, "Sets the Pokémon's %s stat to the max");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {
         this.add("item." + key.get().getDescriptionId() + ".tooltip", tooltip);
+    }
+
+    public void tooltip(Supplier<? extends Item> key, int index, String tooltip) {
+        this.add("item." + key.get().getDescriptionId() + ".tooltip." + index, tooltip);
     }
 }

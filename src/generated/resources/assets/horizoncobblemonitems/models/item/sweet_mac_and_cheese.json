@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "horizoncobblemonitems:item/sweet_mac_and_cheese"
+  }
+}
