@@ -1,0 +1,18 @@
+{
+    "parent": "minecraft:item/handheld",
+    "loader": "neoforge:separate_transforms",
+    "base": {
+        "parent": "horizoncobblemonitems:block/basket_ball"
+    },
+    "perspectives": {
+        "gui": {
+            "parent": "horizoncobblemonitems:item/basket_ball_in_gui"
+        },
+        "ground": {
+            "parent": "horizoncobblemonitems:item/basket_ball_in_gui"
+        },
+        "fixed": {
+            "parent": "horizoncobblemonitems:item/basket_ball_in_gui"
+        }
+    }
+}

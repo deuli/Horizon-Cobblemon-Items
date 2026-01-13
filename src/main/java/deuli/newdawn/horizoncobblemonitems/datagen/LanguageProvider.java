@@ -34,6 +34,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HorizonCobblemonItems.COWARD_BOTTLE_CAP, "Coward Bottle Cap");
         addItem(HorizonCobblemonItems.SLOW_BOTTLE_CAP, "Slow Bottle Cap");
 
+        addItem(HorizonCobblemonItems.BASKET_BALL, "Baskét Ball");
+
         tooltip(HorizonCobblemonItems.GOLDEN_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %1$s.");
         tooltip(HorizonCobblemonItems.VOID_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %1$s.");
 
@@ -52,6 +54,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HorizonCobblemonItems.NUMB_BOTTLE_CAP, "Sets the Pokémon's effective Special Attack IV stat to %1$s.");
         tooltip(HorizonCobblemonItems.COWARD_BOTTLE_CAP, "Sets the Pokémon's effective Special Defense IV stat to %1$s.");
         tooltip(HorizonCobblemonItems.SLOW_BOTTLE_CAP, "Sets the Pokémon's effective Speed IV stat to %1$s.");
+
+        tooltip(HorizonCobblemonItems.BASKET_BALL, "Turns the Pokémon into a shiny Pokémon.");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {

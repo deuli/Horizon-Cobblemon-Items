@@ -2,6 +2,7 @@ package deuli.newdawn.horizoncobblemonitems;
 
 import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.mojang.logging.LogUtils;
+import deuli.newdawn.horizoncobblemonitems.item.BasketBallItem;
 import deuli.newdawn.horizoncobblemonitems.item.BottleCapItem;
 import deuli.newdawn.horizoncobblemonitems.item.SilverBottleCapItem;
 import net.minecraft.core.registries.Registries;
@@ -44,6 +45,8 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> COWARD_BOTTLE_CAP = ITEMS.register("coward_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.SPECIAL_DEFENCE)));
     public static final DeferredItem<Item> SLOW_BOTTLE_CAP = ITEMS.register("slow_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.SPEED)));
 
+    public static final DeferredItem<Item> BASKET_BALL = ITEMS.register("basket_ball", BasketBallItem::new);
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
@@ -67,6 +70,8 @@ public class HorizonCobblemonItems {
                         output.accept(NUMB_BOTTLE_CAP.get());
                         output.accept(COWARD_BOTTLE_CAP.get());
                         output.accept(SLOW_BOTTLE_CAP.get());
+
+                        output.accept(BASKET_BALL.get());
                     })
                     .build()
     );
