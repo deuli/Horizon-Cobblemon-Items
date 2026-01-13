@@ -48,7 +48,7 @@ public class BasketBallItem extends CobblemonItem implements PokemonSelectingIte
         itemStack.consume(1, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)
-            entity.playSound(CobblemonSounds.MEDICINE_PILLS_USE, 1F, 1F);
+            entity.playSound(CobblemonSounds.ITEM_USE, 1F, 1F);
 
         return InteractionResultHolder.success(itemStack);
     }
