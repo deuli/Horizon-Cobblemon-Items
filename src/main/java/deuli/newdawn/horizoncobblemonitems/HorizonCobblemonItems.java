@@ -58,6 +58,8 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> SOUR_MAC_AND_CHEESE = ITEMS.register("sour_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.STAMINA)));
     public static final DeferredItem<Item> BITTER_MAC_AND_CHEESE = ITEMS.register("bitter_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.JUMP)));
 
+    public static final DeferredItem<Item> GENDER_CHANGE_POTION = ITEMS.register("gender_change_potion", GenderChangePotionItem::new);
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
@@ -94,6 +96,8 @@ public class HorizonCobblemonItems {
                         output.accept(SWEET_MAC_AND_CHEESE.get());
                         output.accept(SOUR_MAC_AND_CHEESE.get());
                         output.accept(BITTER_MAC_AND_CHEESE.get());
+
+                        output.accept(GENDER_CHANGE_POTION.get());
                     })
                     .build()
     );

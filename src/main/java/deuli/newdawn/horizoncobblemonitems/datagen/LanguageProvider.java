@@ -47,6 +47,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HorizonCobblemonItems.SOUR_MAC_AND_CHEESE, "Sour Mac and Cheese");
         addItem(HorizonCobblemonItems.BITTER_MAC_AND_CHEESE, "Bitter Mac and Cheese");
 
+        addItem(HorizonCobblemonItems.GENDER_CHANGE_POTION, "Gender Change Potion");
+
         tooltip(HorizonCobblemonItems.GOLDEN_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %1$s");
         tooltip(HorizonCobblemonItems.VOID_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %1$s");
 
@@ -78,13 +80,11 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HorizonCobblemonItems.SWEET_MAC_AND_CHEESE, "Sets the Pokémon's %s stat to the max");
         tooltip(HorizonCobblemonItems.SOUR_MAC_AND_CHEESE, "Sets the Pokémon's %s stat to the max");
         tooltip(HorizonCobblemonItems.BITTER_MAC_AND_CHEESE, "Sets the Pokémon's %s stat to the max");
+
+        tooltip(HorizonCobblemonItems.GENDER_CHANGE_POTION, "Changes the Pokémon's gender");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {
         this.add("item." + key.get().getDescriptionId() + ".tooltip", tooltip);
-    }
-
-    public void tooltip(Supplier<? extends Item> key, int index, String tooltip) {
-        this.add("item." + key.get().getDescriptionId() + ".tooltip." + index, tooltip);
     }
 }
