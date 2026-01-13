@@ -31,5 +31,7 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(HorizonCobblemonItems.SLOW_BOTTLE_CAP.get());
 
         basicItem(HorizonCobblemonItems.DEVOLUTION_SPRAY.get());
+
+        basicItem(HorizonCobblemonItems.ULTRA_RARE_CANDY.get());
     }
 }

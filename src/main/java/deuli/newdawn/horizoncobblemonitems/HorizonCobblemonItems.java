@@ -1,11 +1,9 @@
 package deuli.newdawn.horizoncobblemonitems;
 
+import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.mojang.logging.LogUtils;
-import deuli.newdawn.horizoncobblemonitems.item.BasketBallItem;
-import deuli.newdawn.horizoncobblemonitems.item.BottleCapItem;
-import deuli.newdawn.horizoncobblemonitems.item.DevolutionSprayItem;
-import deuli.newdawn.horizoncobblemonitems.item.SilverBottleCapItem;
+import deuli.newdawn.horizoncobblemonitems.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -50,6 +48,8 @@ public class HorizonCobblemonItems {
 
     public static final DeferredItem<Item> DEVOLUTION_SPRAY = ITEMS.register("devolution_spray", DevolutionSprayItem::new);
 
+    public static final DeferredItem<Item> ULTRA_RARE_CANDY = ITEMS.register("ultra_rare_candy", () -> new LevelItem(Cobblemon.config.getMaxPokemonLevel()));
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
@@ -77,6 +77,8 @@ public class HorizonCobblemonItems {
                         output.accept(BASKET_BALL.get());
 
                         output.accept(DEVOLUTION_SPRAY.get());
+
+                        output.accept(ULTRA_RARE_CANDY);
                     })
                     .build()
     );

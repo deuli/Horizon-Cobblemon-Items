@@ -38,6 +38,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
         addItem(HorizonCobblemonItems.DEVOLUTION_SPRAY, "Devolution Spray");
 
+        addItem(HorizonCobblemonItems.ULTRA_RARE_CANDY, "Ultra Rare Candy");
+
         tooltip(HorizonCobblemonItems.GOLDEN_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %1$s.");
         tooltip(HorizonCobblemonItems.VOID_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %1$s.");
 
@@ -60,6 +62,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HorizonCobblemonItems.BASKET_BALL, "Turns the Pokémon into a shiny Pokémon.");
 
         tooltip(HorizonCobblemonItems.DEVOLUTION_SPRAY, "Devolves a Pokémon into their previous evolution.");
+
+        tooltip(HorizonCobblemonItems.ULTRA_RARE_CANDY, "Increases a Pokémon's level to the max");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {
