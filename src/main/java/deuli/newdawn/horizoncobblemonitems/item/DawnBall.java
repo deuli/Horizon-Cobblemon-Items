@@ -31,6 +31,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
+// TODO: Replace components with translation keys
 public class DawnBall extends Item {
     public static final String SPACING = "   ";
 
@@ -58,7 +59,7 @@ public class DawnBall extends Item {
             }
         }
 
-        player.displayClientMessage(Component.literal("Seems like this " + stackInHand.getDisplayName().getString() + " is empty...").withStyle(ChatFormatting.RED), true);
+        player.displayClientMessage(Component.literal("Seems like this " + stackInHand.getItem().getName(stackInHand).getString() + " is empty...").withStyle(ChatFormatting.RED), true);
         return InteractionResultHolder.fail(stackInHand);
     }
 
