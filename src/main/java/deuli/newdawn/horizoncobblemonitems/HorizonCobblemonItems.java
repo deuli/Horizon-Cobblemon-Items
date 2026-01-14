@@ -1,14 +1,18 @@
 package deuli.newdawn.horizoncobblemonitems;
 
 import com.cobblemon.mod.common.Cobblemon;
+import com.cobblemon.mod.common.api.pokemon.PokemonProperties;
 import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.api.riding.stats.RidingStat;
 import com.mojang.logging.LogUtils;
+import com.mojang.serialization.Codec;
 import deuli.newdawn.horizoncobblemonitems.item.*;
+import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.CustomData;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -17,14 +21,16 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
 import java.util.Set;
+import java.util.function.UnaryOperator;
 
 @Mod(HorizonCobblemonItems.MOD_ID)
 public class HorizonCobblemonItems {
     public static final String MOD_ID = "horizoncobblemonitems";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
+    public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, MOD_ID);
 
     public static final DeferredItem<Item> GOLDEN_BOTTLE_CAP = ITEMS.register("golden_bottle_cap", () -> new BottleCapItem(31, Set.of(Stats.HP, Stats.ATTACK, Stats.DEFENCE, Stats.SPECIAL_ATTACK, Stats.SPECIAL_DEFENCE, Stats.SPEED)));
     public static final DeferredItem<Item> VOID_BOTTLE_CAP = ITEMS.register("void_bottle_cap", () -> new BottleCapItem(0, Set.of(Stats.HP, Stats.ATTACK, Stats.DEFENCE, Stats.SPECIAL_ATTACK, Stats.SPECIAL_DEFENCE, Stats.SPEED)));
@@ -59,6 +65,8 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> BITTER_MAC_AND_CHEESE = ITEMS.register("bitter_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.JUMP)));
 
     public static final DeferredItem<Item> GENDER_CHANGE_POTION = ITEMS.register("gender_change_potion", GenderChangePotionItem::new);
+
+    public static final DeferredItem<Item> DAWN_BALL = ITEMS.register("dawn_ball", DawnBall::new);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
@@ -98,12 +106,22 @@ public class HorizonCobblemonItems {
                         output.accept(BITTER_MAC_AND_CHEESE.get());
 
                         output.accept(GENDER_CHANGE_POTION.get());
+
+                        output.accept(DAWN_BALL.get());
                     })
                     .build()
     );
 
+
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<String>> POKEMON_PROPERTIES = register("pokemon_properties", builder -> builder.persistent(Codec.STRING));
+
     public HorizonCobblemonItems(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+        DATA_COMPONENT_TYPES.register(modEventBus);
+    }
+
+    private static <T> DeferredHolder<DataComponentType<?>, DataComponentType<T>> register(String name, UnaryOperator<DataComponentType.Builder<T>> builder) {
+        return DATA_COMPONENT_TYPES.register(name, () -> builder.apply(DataComponentType.builder()).build());
     }
 }

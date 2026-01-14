@@ -40,6 +40,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
         addItem(HorizonCobblemonItems.ULTRA_RARE_CANDY, "Ultra Rare Candy");
 
+        addItem(HorizonCobblemonItems.DAWN_BALL, "Dawn Ball");
+
         addItem(HorizonCobblemonItems.ULTIMATE_MAC_AND_CHEESE, "Ultimate Mac and Cheese");
         addItem(HorizonCobblemonItems.SPICY_MAC_AND_CHEESE, "Spicy Mac and Cheese");
         addItem(HorizonCobblemonItems.DRY_MAC_AND_CHEESE, "Dry Mac and Cheese");
