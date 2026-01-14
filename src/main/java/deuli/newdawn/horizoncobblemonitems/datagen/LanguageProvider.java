@@ -79,6 +79,18 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
         addItem(HorizonCobblemonItems.VOID_FEATHER, "Void Feather");
         tooltip(HorizonCobblemonItems.VOID_FEATHER, "Resets all of the Pokémon's EVs to %s");
+        addItem(HorizonCobblemonItems.DISTORTED_POMEG_BERRY, "Distorted Pomeg Berry");
+        tooltip(HorizonCobblemonItems.DISTORTED_POMEG_BERRY, "Sets the Pokémon's HP EVs to %s");
+        addItem(HorizonCobblemonItems.DISTORTED_KELPSY_BERRY, "Distorted Kelpsy Berry");
+        tooltip(HorizonCobblemonItems.DISTORTED_KELPSY_BERRY, "Sets the Pokémon's Attack EVs to %s");
+        addItem(HorizonCobblemonItems.DISTORTED_QUALOT_BERRY, "Distorted Qualot Berry");
+        tooltip(HorizonCobblemonItems.DISTORTED_QUALOT_BERRY, "Sets the Pokémon's Defense EVs to %s");
+        addItem(HorizonCobblemonItems.DISTORTED_HONDEW_BERRY, "Distorted Hondew Berry");
+        tooltip(HorizonCobblemonItems.DISTORTED_HONDEW_BERRY, "Sets the Pokémon's Sp. Atk EVs to %s");
+        addItem(HorizonCobblemonItems.DISTORTED_GREPA_BERRY, "Distorted Grepa Berry");
+        tooltip(HorizonCobblemonItems.DISTORTED_GREPA_BERRY, "Sets the Pokémon's Sp. Defense EVs to %s");
+        addItem(HorizonCobblemonItems.DISTORTED_TAMATO_BERRY, "Distorted Tamato Berry");
+        tooltip(HorizonCobblemonItems.DISTORTED_TAMATO_BERRY, "Sets the Pokémon's HP Speed to %s");
 
         addItem(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER, "Health Phoenix Feather");
         tooltip(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER, "Sets the Pokémon's HP EVs to %s");

@@ -68,6 +68,12 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> DAWN_BALL = ITEMS.register("dawn_ball", DawnBall::new);
 
     public static final DeferredItem<Item> VOID_FEATHER = ITEMS.register("void_feather", () -> new VoidFeatherItem(0, Stats.Companion.getPERMANENT()));
+    public static final DeferredItem<Item> DISTORTED_POMEG_BERRY = ITEMS.register("distorted_pomeg_berry", () -> new VoidFeatherItem(0, Set.of(Stats.HP)));
+    public static final DeferredItem<Item> DISTORTED_KELPSY_BERRY = ITEMS.register("distorted_kelpsy_berry", () -> new VoidFeatherItem(0, Set.of(Stats.ATTACK)));
+    public static final DeferredItem<Item> DISTORTED_QUALOT_BERRY = ITEMS.register("distorted_qualot_berry", () -> new VoidFeatherItem(0, Set.of(Stats.DEFENCE)));
+    public static final DeferredItem<Item> DISTORTED_HONDEW_BERRY = ITEMS.register("distorted_hondew_berry", () -> new VoidFeatherItem(0, Set.of(Stats.SPECIAL_ATTACK)));
+    public static final DeferredItem<Item> DISTORTED_GREPA_BERRY = ITEMS.register("distorted_grepa_berry", () -> new VoidFeatherItem(0, Set.of(Stats.SPECIAL_DEFENCE)));
+    public static final DeferredItem<Item> DISTORTED_TAMATO_BERRY = ITEMS.register("distorted_tamato_berry", () -> new VoidFeatherItem(0, Set.of(Stats.SPEED)));
 
     public static final DeferredItem<Item> HEALTH_PHOENIX_FEATHER = ITEMS.register("health_phoenix_feather", () -> new VoidFeatherItem(EVs.MAX_STAT_VALUE, Set.of(Stats.HP)));
     public static final DeferredItem<Item> MUSCLE_PHOENIX_FEATHER = ITEMS.register("muscle_phoenix_feather", () -> new VoidFeatherItem(EVs.MAX_STAT_VALUE, Set.of(Stats.ATTACK)));
@@ -118,6 +124,12 @@ public class HorizonCobblemonItems {
                         output.accept(DAWN_BALL.get());
 
                         output.accept(VOID_FEATHER.get());
+                        output.accept(DISTORTED_POMEG_BERRY.get());
+                        output.accept(DISTORTED_KELPSY_BERRY.get());
+                        output.accept(DISTORTED_QUALOT_BERRY.get());
+                        output.accept(DISTORTED_HONDEW_BERRY.get());
+                        output.accept(DISTORTED_GREPA_BERRY.get());
+                        output.accept(DISTORTED_TAMATO_BERRY.get());
 
                         output.accept(HEALTH_PHOENIX_FEATHER.get());
                         output.accept(MUSCLE_PHOENIX_FEATHER.get());
