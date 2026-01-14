@@ -1,9 +1,9 @@
 package deuli.newdawn.horizoncobblemonitems;
 
 import com.cobblemon.mod.common.Cobblemon;
-import com.cobblemon.mod.common.api.pokemon.PokemonProperties;
 import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.api.riding.stats.RidingStat;
+import com.cobblemon.mod.common.pokemon.EVs;
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
 import deuli.newdawn.horizoncobblemonitems.item.*;
@@ -12,7 +12,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.component.CustomData;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -70,6 +69,13 @@ public class HorizonCobblemonItems {
 
     public static final DeferredItem<Item> VOID_FEATHER = ITEMS.register("void_feather", () -> new VoidFeatherItem(0, Stats.Companion.getPERMANENT()));
 
+    public static final DeferredItem<Item> HEALTH_PHOENIX_FEATHER = ITEMS.register("health_phoenix_feather", () -> new VoidFeatherItem(EVs.MAX_STAT_VALUE, Set.of(Stats.HP)));
+    public static final DeferredItem<Item> MUSCLE_PHOENIX_FEATHER = ITEMS.register("muscle_phoenix_feather", () -> new VoidFeatherItem(EVs.MAX_STAT_VALUE, Set.of(Stats.ATTACK)));
+    public static final DeferredItem<Item> RESIST_PHOENIX_FEATHER = ITEMS.register("resist_phoenix_feather", () -> new VoidFeatherItem(EVs.MAX_STAT_VALUE, Set.of(Stats.DEFENCE)));
+    public static final DeferredItem<Item> GENIUS_PHOENIX_FEATHER = ITEMS.register("genius_phoenix_feather", () -> new VoidFeatherItem(EVs.MAX_STAT_VALUE, Set.of(Stats.SPECIAL_ATTACK)));
+    public static final DeferredItem<Item> CLEVER_PHOENIX_FEATHER = ITEMS.register("clever_phoenix_feather", () -> new VoidFeatherItem(EVs.MAX_STAT_VALUE, Set.of(Stats.SPECIAL_DEFENCE)));
+    public static final DeferredItem<Item> SWIFT_PHOENIX_FEATHER = ITEMS.register("swift_phoenix_feather", () -> new VoidFeatherItem(EVs.MAX_STAT_VALUE, Set.of(Stats.SPEED)));
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
@@ -112,6 +118,13 @@ public class HorizonCobblemonItems {
                         output.accept(DAWN_BALL.get());
 
                         output.accept(VOID_FEATHER.get());
+
+                        output.accept(HEALTH_PHOENIX_FEATHER.get());
+                        output.accept(MUSCLE_PHOENIX_FEATHER.get());
+                        output.accept(RESIST_PHOENIX_FEATHER.get());
+                        output.accept(GENIUS_PHOENIX_FEATHER.get());
+                        output.accept(CLEVER_PHOENIX_FEATHER.get());
+                        output.accept(SWIFT_PHOENIX_FEATHER.get());
                     })
                     .build()
     );

@@ -79,6 +79,19 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
         addItem(HorizonCobblemonItems.VOID_FEATHER, "Void Feather");
         tooltip(HorizonCobblemonItems.VOID_FEATHER, "Resets all of the Pokémon's EVs to %s");
+
+        addItem(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER, "Health Phoenix Feather");
+        tooltip(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER, "Sets the Pokémon's HP EVs to %s");
+        addItem(HorizonCobblemonItems.MUSCLE_PHOENIX_FEATHER, "Muscle Phoenix Feather");
+        tooltip(HorizonCobblemonItems.MUSCLE_PHOENIX_FEATHER, "Sets the Pokémon's Attack EVs to %s");
+        addItem(HorizonCobblemonItems.RESIST_PHOENIX_FEATHER, "Resist Phoenix Feather");
+        tooltip(HorizonCobblemonItems.RESIST_PHOENIX_FEATHER, "Sets the Pokémon's Defense EVs to %s");
+        addItem(HorizonCobblemonItems.GENIUS_PHOENIX_FEATHER, "Genius Phoenix Feather");
+        tooltip(HorizonCobblemonItems.GENIUS_PHOENIX_FEATHER, "Sets the Pokémon's Sp. Atk EVs to %s");
+        addItem(HorizonCobblemonItems.CLEVER_PHOENIX_FEATHER, "Clever Phoenix Feather");
+        tooltip(HorizonCobblemonItems.CLEVER_PHOENIX_FEATHER, "Sets the Pokémon's Sp. Defense EVs to %s");
+        addItem(HorizonCobblemonItems.SWIFT_PHOENIX_FEATHER, "Swift Phoenix Feather");
+        tooltip(HorizonCobblemonItems.SWIFT_PHOENIX_FEATHER, "Sets the Pokémon's Speed EVs to %s");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {

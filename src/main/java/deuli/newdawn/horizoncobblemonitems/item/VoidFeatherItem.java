@@ -3,9 +3,11 @@ package deuli.newdawn.horizoncobblemonitems.item;
 import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.item.PokemonSelectingItem;
 import com.cobblemon.mod.common.api.pokemon.stats.Stat;
+import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.item.CobblemonItem;
 import com.cobblemon.mod.common.item.battle.BagItem;
+import com.cobblemon.mod.common.pokemon.EVs;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -39,8 +41,19 @@ public class VoidFeatherItem extends CobblemonItem implements PokemonSelectingIt
     }
 
     private boolean canChangeEV(Pokemon pokemon, Stat stat) {
-        Integer ev = pokemon.getEvs().get(stat);
-        return ev != null && ev != evSetAmount;
+        if (pokemon.getEvs().getOrDefault(stat) != evSetAmount) {
+            int total = 0;
+            for (Stat currentStat : Stats.Companion.getPERMANENT()) {
+                if (currentStat != stat)
+                    total += pokemon.getEvs().getOrDefault(currentStat);
+                else
+                    total += evSetAmount;
+            }
+
+            return total <= EVs.MAX_TOTAL_VALUE;
+        }
+
+        return false;
     }
 
     @Override
