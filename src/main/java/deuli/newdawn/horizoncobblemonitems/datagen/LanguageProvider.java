@@ -76,6 +76,9 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HorizonCobblemonItems.GENDER_CHANGE_POTION, "Changes the Pokémon's gender");
 
         addItem(HorizonCobblemonItems.DAWN_BALL, "Dawn Ball");
+
+        addItem(HorizonCobblemonItems.VOID_FEATHER, "Void Feather");
+        tooltip(HorizonCobblemonItems.VOID_FEATHER, "Resets all of the Pokémon's EVs to %s");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {

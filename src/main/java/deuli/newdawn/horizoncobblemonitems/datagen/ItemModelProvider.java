@@ -42,5 +42,7 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(HorizonCobblemonItems.BITTER_MAC_AND_CHEESE.get());
 
         basicItem(HorizonCobblemonItems.GENDER_CHANGE_POTION.get());
+
+        basicItem(HorizonCobblemonItems.VOID_FEATHER.get());
     }
 }

@@ -68,6 +68,8 @@ public class HorizonCobblemonItems {
 
     public static final DeferredItem<Item> DAWN_BALL = ITEMS.register("dawn_ball", DawnBall::new);
 
+    public static final DeferredItem<Item> VOID_FEATHER = ITEMS.register("void_feather", () -> new VoidFeatherItem(0, Stats.Companion.getPERMANENT()));
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
@@ -108,6 +110,8 @@ public class HorizonCobblemonItems {
                         output.accept(GENDER_CHANGE_POTION.get());
 
                         output.accept(DAWN_BALL.get());
+
+                        output.accept(VOID_FEATHER.get());
                     })
                     .build()
     );
