@@ -2,7 +2,6 @@ package deuli.newdawn.horizoncobblemonitems.item;
 
 import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.item.PokemonSelectingItem;
-import com.cobblemon.mod.common.api.pokemon.experience.CandyExperienceSource;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.item.CobblemonItem;
 import com.cobblemon.mod.common.item.battle.BagItem;
@@ -14,7 +13,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
@@ -22,12 +20,12 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class LevelItem extends CobblemonItem implements PokemonSelectingItem {
-    private final int level;
+public class UncommonCandyItem extends CobblemonItem implements PokemonSelectingItem {
+    private final int levelDecreaseAmount;
 
-    public LevelItem(int level) {
-        super(new Properties().rarity(Rarity.EPIC));
-        this.level = level;
+    public UncommonCandyItem(int levelDecreaseAmount) {
+        super(new Properties());
+        this.levelDecreaseAmount = levelDecreaseAmount;
     }
 
     @Override
@@ -37,7 +35,7 @@ public class LevelItem extends CobblemonItem implements PokemonSelectingItem {
 
     @Override
     public boolean canUseOnPokemon(@NotNull ItemStack stack, @NotNull Pokemon pokemon) {
-        return pokemon.getLevel() != level;
+        return pokemon.getLevel() > 1;
     }
 
     @Override
@@ -46,12 +44,8 @@ public class LevelItem extends CobblemonItem implements PokemonSelectingItem {
             return InteractionResultHolder.fail(itemStack);
         }
 
-        if (pokemon.getLevel() != level) {
-            if (pokemon.getLevel() < level)
-                pokemon.addExperienceWithPlayer(serverPlayer, new CandyExperienceSource(serverPlayer, itemStack), pokemon.getExperienceToLevel(level));
-            else
-                pokemon.setLevel(level);
-        }
+        if (pokemon.getLevel() > 1)
+            pokemon.setLevel(pokemon.getLevel() - levelDecreaseAmount);
 
         itemStack.consume(1, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
@@ -71,6 +65,6 @@ public class LevelItem extends CobblemonItem implements PokemonSelectingItem {
 
     @Override
     public void appendHoverText(ItemStack itemStack, @NotNull TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
-        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip", level).withStyle(ChatFormatting.GRAY));
+        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip", levelDecreaseAmount).withStyle(ChatFormatting.GRAY));
     }
 }

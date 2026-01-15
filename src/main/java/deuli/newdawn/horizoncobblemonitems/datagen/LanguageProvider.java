@@ -56,6 +56,10 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HorizonCobblemonItems.DEVOLUTION_SPRAY, "Devolution Spray");
         tooltip(HorizonCobblemonItems.DEVOLUTION_SPRAY, "Devolves a Pokémon into their previous evolution");
 
+        addItem(HorizonCobblemonItems.COMMON_CANDY, "Common Candy");
+        tooltip(HorizonCobblemonItems.COMMON_CANDY, "Resets a Pokémon's level to %s");
+        addItem(HorizonCobblemonItems.UNCOMMON_CANDY, "Uncommon Candy");
+        tooltip(HorizonCobblemonItems.UNCOMMON_CANDY, "Lowers a Pokémon's level by one");
         addItem(HorizonCobblemonItems.ULTRA_RARE_CANDY, "Ultra Rare Candy");
         tooltip(HorizonCobblemonItems.ULTRA_RARE_CANDY, "Increases a Pokémon's level to the max");
 

@@ -54,6 +54,8 @@ public class HorizonCobblemonItems {
 
     public static final DeferredItem<Item> DEVOLUTION_SPRAY = ITEMS.register("devolution_spray", DevolutionSprayItem::new);
 
+    public static final DeferredItem<Item> COMMON_CANDY = ITEMS.register("common_candy", () -> new LevelItem(1));
+    public static final DeferredItem<Item> UNCOMMON_CANDY = ITEMS.register("uncommon_candy", () -> new UncommonCandyItem(1));
     public static final DeferredItem<Item> ULTRA_RARE_CANDY = ITEMS.register("ultra_rare_candy", () -> new LevelItem(Cobblemon.config.getMaxPokemonLevel()));
 
     public static final DeferredItem<Item> ULTIMATE_MAC_AND_CHEESE = ITEMS.register("ultimate_mac_and_cheese", () -> new MacAndCheeseItem(Set.of(RidingStat.ACCELERATION, RidingStat.SKILL, RidingStat.SPEED, RidingStat.STAMINA, RidingStat.JUMP)));
@@ -122,6 +124,8 @@ public class HorizonCobblemonItems {
 
                         output.accept(DEVOLUTION_SPRAY.get());
 
+                        output.accept(COMMON_CANDY.get());
+                        output.accept(UNCOMMON_CANDY.get());
                         output.accept(ULTRA_RARE_CANDY.get());
 
                         output.accept(ULTIMATE_MAC_AND_CHEESE.get());

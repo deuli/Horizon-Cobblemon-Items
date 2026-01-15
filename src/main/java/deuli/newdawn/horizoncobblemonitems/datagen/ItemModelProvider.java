@@ -32,6 +32,8 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
 
         basicItem(HorizonCobblemonItems.DEVOLUTION_SPRAY.get());
 
+        basicItem(HorizonCobblemonItems.COMMON_CANDY.get());
+        basicItem(HorizonCobblemonItems.UNCOMMON_CANDY.get());
         basicItem(HorizonCobblemonItems.ULTRA_RARE_CANDY.get());
 
         basicItem(HorizonCobblemonItems.ULTIMATE_MAC_AND_CHEESE.get());
