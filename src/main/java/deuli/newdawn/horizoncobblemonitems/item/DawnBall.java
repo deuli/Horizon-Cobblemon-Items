@@ -27,6 +27,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
@@ -37,7 +38,7 @@ public class DawnBall extends Item {
     public static final String SPACING = "   ";
 
     public DawnBall() {
-        super(new Item.Properties());
+        super(new Item.Properties().rarity(Rarity.EPIC));
     }
 
     @Override

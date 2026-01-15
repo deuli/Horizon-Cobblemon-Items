@@ -17,6 +17,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
@@ -29,8 +30,8 @@ public class EVSetItem extends CobblemonItem implements PokemonSelectingItem {
     private final int evSetAmount;
     private final Set<Stat> targetStats;
 
-    public EVSetItem(int evSetAmount, Set<Stat> targetStats) {
-        super(new Item.Properties());
+    public EVSetItem(Rarity rarity, int evSetAmount, Set<Stat> targetStats) {
+        super(new Item.Properties().rarity(rarity));
         this.evSetAmount = evSetAmount;
         this.targetStats = targetStats;
     }

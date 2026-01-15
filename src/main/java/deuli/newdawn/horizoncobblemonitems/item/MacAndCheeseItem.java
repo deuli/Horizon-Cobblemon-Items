@@ -17,6 +17,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.event.enchanting.EnchantmentLevelSetEvent;
@@ -29,8 +30,8 @@ import java.util.Set;
 public class MacAndCheeseItem extends CobblemonItem implements PokemonSelectingItem {
     private final Set<RidingStat> targetStats;
 
-    public MacAndCheeseItem(Set<RidingStat> targetStats) {
-        super(new Item.Properties());
+    public MacAndCheeseItem(Rarity rarity, Set<RidingStat> targetStats) {
+        super(new Item.Properties().rarity(rarity));
         this.targetStats = targetStats;
     }
 

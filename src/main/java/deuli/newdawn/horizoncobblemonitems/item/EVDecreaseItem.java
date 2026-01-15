@@ -16,6 +16,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
@@ -28,7 +29,7 @@ public class EVDecreaseItem extends CobblemonItem implements PokemonSelectingIte
     private final int evDecreaseAmount;
 
     public EVDecreaseItem(Stat stat, int evDecreaseAmount) {
-        super(new Item.Properties());
+        super(new Item.Properties().rarity(Rarity.UNCOMMON));
         this.stat = stat;
         this.evDecreaseAmount = evDecreaseAmount;
     }

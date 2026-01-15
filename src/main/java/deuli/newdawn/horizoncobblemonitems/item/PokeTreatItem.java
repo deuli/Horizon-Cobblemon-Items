@@ -13,6 +13,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
@@ -23,8 +24,8 @@ import java.util.List;
 public class PokeTreatItem extends CobblemonItem implements PokemonSelectingItem {
     private final int friendshipSetAmount;
 
-    public PokeTreatItem(int friendshipSetAmount) {
-        super(new Properties());
+    public PokeTreatItem(Rarity rarity, int friendshipSetAmount) {
+        super(new Properties().rarity(rarity));
         this.friendshipSetAmount = friendshipSetAmount;
     }
 

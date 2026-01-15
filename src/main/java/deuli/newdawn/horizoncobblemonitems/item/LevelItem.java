@@ -25,8 +25,8 @@ import java.util.List;
 public class LevelItem extends CobblemonItem implements PokemonSelectingItem {
     private final int level;
 
-    public LevelItem(int level) {
-        super(new Properties().rarity(Rarity.EPIC));
+    public LevelItem(Rarity rarity, int level) {
+        super(new Properties().rarity(rarity));
         this.level = level;
     }
 
