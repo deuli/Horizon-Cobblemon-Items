@@ -25,11 +25,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Set;
 
-public class VoidFeatherItem extends CobblemonItem implements PokemonSelectingItem {
+public class EVSetItem extends CobblemonItem implements PokemonSelectingItem {
     private final int evSetAmount;
     private final Set<Stat> targetStats;
 
-    public VoidFeatherItem(int evSetAmount, Set<Stat> targetStats) {
+    public EVSetItem(int evSetAmount, Set<Stat> targetStats) {
         super(new Item.Properties());
         this.evSetAmount = evSetAmount;
         this.targetStats = targetStats;

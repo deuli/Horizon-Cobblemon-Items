@@ -83,8 +83,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         itemResult(HorizonCobblemonItems.DAWN_BALL, "success", "%s was added to your party!");
         itemResult(HorizonCobblemonItems.DAWN_BALL, "fail", "Seems like this %s is empty...");
 
-        addItem(HorizonCobblemonItems.VOID_FEATHER, "Void Feather");
-        tooltip(HorizonCobblemonItems.VOID_FEATHER, "Resets all of the Pokémon's EVs to %s");
+        addItem(HorizonCobblemonItems.AXIOM_BERRY, "Axiom Berry");
+        tooltip(HorizonCobblemonItems.AXIOM_BERRY, "Resets all of the Pokémon's EVs to %s");
         addItem(HorizonCobblemonItems.DISTORTED_POMEG_BERRY, "Distorted Pomeg Berry");
         tooltip(HorizonCobblemonItems.DISTORTED_POMEG_BERRY, "Resets the Pokémon's HP EVs to %s");
         addItem(HorizonCobblemonItems.DISTORTED_KELPSY_BERRY, "Distorted Kelpsy Berry");

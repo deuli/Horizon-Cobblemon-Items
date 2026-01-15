@@ -43,7 +43,7 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
 
         basicItem(HorizonCobblemonItems.GENDER_CHANGE_POTION.get());
 
-        basicItem(HorizonCobblemonItems.VOID_FEATHER.get());
+        basicItem(HorizonCobblemonItems.AXIOM_BERRY.get());
         basicItem(HorizonCobblemonItems.DISTORTED_POMEG_BERRY.get());
         basicItem(HorizonCobblemonItems.DISTORTED_KELPSY_BERRY.get());
         basicItem(HorizonCobblemonItems.DISTORTED_QUALOT_BERRY.get());
