@@ -98,6 +98,19 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HorizonCobblemonItems.DISTORTED_TAMATO_BERRY, "Distorted Tamato Berry");
         tooltip(HorizonCobblemonItems.DISTORTED_TAMATO_BERRY, "Resets the Pokémon's HP Speed to %s");
 
+        addItem(HorizonCobblemonItems.SHADOW_HEALTH_FEATHER, "Shadow Health Feather");
+        tooltip(HorizonCobblemonItems.SHADOW_HEALTH_FEATHER, "Lowers the Pokémon's HP EVs by %s");
+        addItem(HorizonCobblemonItems.SHADOW_MUSCLE_FEATHER, "Shadow Muscle Feather");
+        tooltip(HorizonCobblemonItems.SHADOW_MUSCLE_FEATHER, "Lowers the Pokémon's Attack EVs by %s");
+        addItem(HorizonCobblemonItems.SHADOW_RESIST_FEATHER, "Shadow Resist Feather");
+        tooltip(HorizonCobblemonItems.SHADOW_RESIST_FEATHER, "Lowers the Pokémon's Defense EVs by %s");
+        addItem(HorizonCobblemonItems.SHADOW_GENIUS_FEATHER, "Shadow Genius Feather");
+        tooltip(HorizonCobblemonItems.SHADOW_GENIUS_FEATHER, "Lowers the Pokémon's Sp. Atk EVs by %s");
+        addItem(HorizonCobblemonItems.SHADOW_CLEVER_FEATHER, "Shadow Clever Feather");
+        tooltip(HorizonCobblemonItems.SHADOW_CLEVER_FEATHER, "Lowers the Pokémon's Sp. Defense EVs by %s");
+        addItem(HorizonCobblemonItems.SHADOW_SWIFT_FEATHER, "Shadow Swift Feather");
+        tooltip(HorizonCobblemonItems.SHADOW_SWIFT_FEATHER, "Lowers the Pokémon's Speed EVs by %s");
+
         addItem(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER, "Health Phoenix Feather");
         tooltip(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER, "Sets the Pokémon's HP EVs to %s");
         addItem(HorizonCobblemonItems.MUSCLE_PHOENIX_FEATHER, "Muscle Phoenix Feather");

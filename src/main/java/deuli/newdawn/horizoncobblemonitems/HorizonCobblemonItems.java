@@ -75,6 +75,13 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> DISTORTED_GREPA_BERRY = ITEMS.register("distorted_grepa_berry", () -> new EVSetItem(0, Set.of(Stats.SPECIAL_DEFENCE)));
     public static final DeferredItem<Item> DISTORTED_TAMATO_BERRY = ITEMS.register("distorted_tamato_berry", () -> new EVSetItem(0, Set.of(Stats.SPEED)));
 
+    public static final DeferredItem<Item> SHADOW_HEALTH_FEATHER = ITEMS.register("shadow_health_feather", () -> new EVDecreaseItem(Stats.HP, -1));
+    public static final DeferredItem<Item> SHADOW_MUSCLE_FEATHER = ITEMS.register("shadow_muscle_feather", () -> new EVDecreaseItem(Stats.ATTACK, -1));
+    public static final DeferredItem<Item> SHADOW_RESIST_FEATHER = ITEMS.register("shadow_resist_feather", () -> new EVDecreaseItem(Stats.DEFENCE, -1));
+    public static final DeferredItem<Item> SHADOW_GENIUS_FEATHER = ITEMS.register("shadow_genius_feather", () -> new EVDecreaseItem(Stats.SPECIAL_ATTACK, -1));
+    public static final DeferredItem<Item> SHADOW_CLEVER_FEATHER = ITEMS.register("shadow_clever_feather", () -> new EVDecreaseItem(Stats.SPECIAL_DEFENCE, -1));
+    public static final DeferredItem<Item> SHADOW_SWIFT_FEATHER = ITEMS.register("shadow_swift_feather", () -> new EVDecreaseItem(Stats.SPEED, -1));
+
     public static final DeferredItem<Item> HEALTH_PHOENIX_FEATHER = ITEMS.register("health_phoenix_feather", () -> new EVSetItem(EVs.MAX_STAT_VALUE, Set.of(Stats.HP)));
     public static final DeferredItem<Item> MUSCLE_PHOENIX_FEATHER = ITEMS.register("muscle_phoenix_feather", () -> new EVSetItem(EVs.MAX_STAT_VALUE, Set.of(Stats.ATTACK)));
     public static final DeferredItem<Item> RESIST_PHOENIX_FEATHER = ITEMS.register("resist_phoenix_feather", () -> new EVSetItem(EVs.MAX_STAT_VALUE, Set.of(Stats.DEFENCE)));
@@ -130,6 +137,13 @@ public class HorizonCobblemonItems {
                         output.accept(DISTORTED_HONDEW_BERRY.get());
                         output.accept(DISTORTED_GREPA_BERRY.get());
                         output.accept(DISTORTED_TAMATO_BERRY.get());
+
+                        output.accept(SHADOW_HEALTH_FEATHER.get());
+                        output.accept(SHADOW_MUSCLE_FEATHER.get());
+                        output.accept(SHADOW_RESIST_FEATHER.get());
+                        output.accept(SHADOW_GENIUS_FEATHER.get());
+                        output.accept(SHADOW_CLEVER_FEATHER.get());
+                        output.accept(SHADOW_SWIFT_FEATHER.get());
 
                         output.accept(HEALTH_PHOENIX_FEATHER.get());
                         output.accept(MUSCLE_PHOENIX_FEATHER.get());
