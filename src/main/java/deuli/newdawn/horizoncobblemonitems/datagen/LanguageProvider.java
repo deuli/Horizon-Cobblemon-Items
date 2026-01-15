@@ -127,6 +127,11 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HorizonCobblemonItems.MAGIC_8_BALL, "Magic 8 Ball");
         tooltip(HorizonCobblemonItems.MAGIC_8_BALL, "Swaps the Pokémon's current ball to the ball in the player's offhand");
         itemResult(HorizonCobblemonItems.MAGIC_8_BALL, "fail", "You're not holding a Poké Ball in your offhand");
+
+        addItem(HorizonCobblemonItems.POKE_TREAT, "Poké Treat");
+        tooltip(HorizonCobblemonItems.POKE_TREAT, "Maxes a Pokémon's friendship");
+        addItem(HorizonCobblemonItems.STALE_POKE_TREAT, "Stale Poké Treat");
+        tooltip(HorizonCobblemonItems.STALE_POKE_TREAT, "Resets a Pokémon friendship to %s");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {

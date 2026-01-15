@@ -91,6 +91,9 @@ public class HorizonCobblemonItems {
 
     public static final DeferredItem<Item> MAGIC_8_BALL = ITEMS.register("magic_8_ball", Magic8BallItem::new);
 
+    public static final DeferredItem<Item> POKE_TREAT = ITEMS.register("poke_treat", () -> new PokeTreatItem(Cobblemon.config.getMaxPokemonFriendship()));
+    public static final DeferredItem<Item> STALE_POKE_TREAT = ITEMS.register("stale_poke_treat", () -> new PokeTreatItem(0));
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
@@ -155,6 +158,9 @@ public class HorizonCobblemonItems {
                         output.accept(SWIFT_PHOENIX_FEATHER.get());
 
                         output.accept(MAGIC_8_BALL.get());
+
+                        output.accept(POKE_TREAT.get());
+                        output.accept(STALE_POKE_TREAT.get());
                     })
                     .build()
     );

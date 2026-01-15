@@ -66,5 +66,8 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(HorizonCobblemonItems.SWIFT_PHOENIX_FEATHER.get());
 
         basicItem(HorizonCobblemonItems.MAGIC_8_BALL.get());
+
+        basicItem(HorizonCobblemonItems.POKE_TREAT.get());
+        basicItem(HorizonCobblemonItems.STALE_POKE_TREAT.get());
     }
 }
