@@ -91,6 +91,6 @@ public class VoidFeatherItem extends CobblemonItem implements PokemonSelectingIt
 
     @Override
     public void appendHoverText(ItemStack itemStack, @NotNull TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
-        componentList.add(Component.translatable("item." + itemStack.getItem().getDescriptionId() + ".tooltip", evSetAmount).withStyle(ChatFormatting.GRAY));
+        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip", evSetAmount).withStyle(ChatFormatting.GRAY));
     }
 }

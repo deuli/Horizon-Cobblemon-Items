@@ -80,11 +80,11 @@ public class MacAndCheeseItem extends CobblemonItem implements PokemonSelectingI
     public void appendHoverText(ItemStack itemStack, @NotNull Item.TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
         if (targetStats.size() == 1) {
             RidingStat ridingStat = targetStats.stream().findFirst().get();
-            componentList.add(Component.translatable("item." + itemStack.getItem().getDescriptionId() + ".tooltip",
+            componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip",
                     ridingStat.getDisplayName().withColor(ridingStat.getFlavour().getColour())
             ).withStyle(ChatFormatting.GRAY));
         } else
-            componentList.add(Component.translatable("item." + itemStack.getItem().getDescriptionId() + ".tooltip").withStyle(ChatFormatting.GRAY));
+            componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip").withStyle(ChatFormatting.GRAY));
     }
 
 }

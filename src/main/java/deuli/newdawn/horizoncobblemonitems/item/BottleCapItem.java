@@ -77,6 +77,6 @@ public class BottleCapItem extends CobblemonItem implements PokemonSelectingItem
 
     @Override
     public void appendHoverText(ItemStack itemStack, @NotNull TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
-        componentList.add(Component.translatable("item." + itemStack.getItem().getDescriptionId() + ".tooltip", ivSetAmount).withStyle(ChatFormatting.GRAY));
+        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip", ivSetAmount).withStyle(ChatFormatting.GRAY));
     }
 }

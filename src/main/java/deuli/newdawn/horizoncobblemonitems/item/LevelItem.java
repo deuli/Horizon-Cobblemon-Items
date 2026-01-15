@@ -67,6 +67,6 @@ public class LevelItem extends CobblemonItem implements PokemonSelectingItem {
 
     @Override
     public void appendHoverText(ItemStack itemStack, @NotNull TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
-        componentList.add(Component.translatable("item." + itemStack.getItem().getDescriptionId() + ".tooltip", level).withStyle(ChatFormatting.GRAY));
+        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip", level).withStyle(ChatFormatting.GRAY));
     }
 }

@@ -18,7 +18,7 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HorizonCobblemonItems.GOLDEN_BOTTLE_CAP, "Golden Bottle Cap");
         tooltip(HorizonCobblemonItems.GOLDEN_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %s");
         addItem(HorizonCobblemonItems.VOID_BOTTLE_CAP, "Void Bottle Cap");
-        tooltip(HorizonCobblemonItems.VOID_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %s");
+        tooltip(HorizonCobblemonItems.VOID_BOTTLE_CAP, "Resets all of the Pokémon's effective IV stats to %s");
 
         addItem(HorizonCobblemonItems.SILVER_BOTTLE_CAP, "Silver Bottle Cap");
         tooltip(HorizonCobblemonItems.SILVER_BOTTLE_CAP, "Sets one of the Pokémon's effective IV stat to %s");
@@ -36,19 +36,19 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HorizonCobblemonItems.QUICK_BOTTLE_CAP, "Sets the Pokémon's effective Speed IV stat to %s");
 
         addItem(HorizonCobblemonItems.OBSIDIAN_BOTTLE_CAP, "Obsidian Bottle Cap");
-        tooltip(HorizonCobblemonItems.OBSIDIAN_BOTTLE_CAP, "Sets one of the Pokémon's effective IV stat to %s");
+        tooltip(HorizonCobblemonItems.OBSIDIAN_BOTTLE_CAP, "Resets one of the Pokémon's effective IV stat to %s");
         addItem(HorizonCobblemonItems.SICKLY_BOTTLE_CAP, "Sickly Bottle Cap");
-        tooltip(HorizonCobblemonItems.SICKLY_BOTTLE_CAP, "Sets the Pokémon's effective HP IV stat to %s");
+        tooltip(HorizonCobblemonItems.SICKLY_BOTTLE_CAP, "Resets the Pokémon's effective HP IV stat to %s");
         addItem(HorizonCobblemonItems.WEAK_BOTTLE_CAP, "Weak Bottle Cap");
-        tooltip(HorizonCobblemonItems.WEAK_BOTTLE_CAP, "Sets the Pokémon's effective Attack IV stat to %s");
+        tooltip(HorizonCobblemonItems.WEAK_BOTTLE_CAP, "Resets the Pokémon's effective Attack IV stat to %s");
         addItem(HorizonCobblemonItems.BRITTLE_BOTTLE_CAP, "Brittle Bottle Cap");
-        tooltip(HorizonCobblemonItems.BRITTLE_BOTTLE_CAP, "Sets the Pokémon's effective Defense IV stat to %s");
+        tooltip(HorizonCobblemonItems.BRITTLE_BOTTLE_CAP, "Resets the Pokémon's effective Defense IV stat to %s");
         addItem(HorizonCobblemonItems.NUMB_BOTTLE_CAP, "Numb Bottle Cap");
-        tooltip(HorizonCobblemonItems.NUMB_BOTTLE_CAP, "Sets the Pokémon's effective Special Attack IV stat to %s");
+        tooltip(HorizonCobblemonItems.NUMB_BOTTLE_CAP, "Resets the Pokémon's effective Special Attack IV stat to %s");
         addItem(HorizonCobblemonItems.COWARD_BOTTLE_CAP, "Coward Bottle Cap");
-        tooltip(HorizonCobblemonItems.COWARD_BOTTLE_CAP, "Sets the Pokémon's effective Special Defense IV stat to %s");
+        tooltip(HorizonCobblemonItems.COWARD_BOTTLE_CAP, "Resets the Pokémon's effective Special Defense IV stat to %s");
         addItem(HorizonCobblemonItems.SLOW_BOTTLE_CAP, "Slow Bottle Cap");
-        tooltip(HorizonCobblemonItems.SLOW_BOTTLE_CAP, "Sets the Pokémon's effective Speed IV stat to %s");
+        tooltip(HorizonCobblemonItems.SLOW_BOTTLE_CAP, "Resets the Pokémon's effective Speed IV stat to %s");
 
         addItem(HorizonCobblemonItems.BASKET_BALL, "Baskét Ball");
         tooltip(HorizonCobblemonItems.BASKET_BALL, "Turns the Pokémon into a shiny Pokémon");
@@ -86,17 +86,17 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HorizonCobblemonItems.VOID_FEATHER, "Void Feather");
         tooltip(HorizonCobblemonItems.VOID_FEATHER, "Resets all of the Pokémon's EVs to %s");
         addItem(HorizonCobblemonItems.DISTORTED_POMEG_BERRY, "Distorted Pomeg Berry");
-        tooltip(HorizonCobblemonItems.DISTORTED_POMEG_BERRY, "Sets the Pokémon's HP EVs to %s");
+        tooltip(HorizonCobblemonItems.DISTORTED_POMEG_BERRY, "Resets the Pokémon's HP EVs to %s");
         addItem(HorizonCobblemonItems.DISTORTED_KELPSY_BERRY, "Distorted Kelpsy Berry");
-        tooltip(HorizonCobblemonItems.DISTORTED_KELPSY_BERRY, "Sets the Pokémon's Attack EVs to %s");
+        tooltip(HorizonCobblemonItems.DISTORTED_KELPSY_BERRY, "Resets the Pokémon's Attack EVs to %s");
         addItem(HorizonCobblemonItems.DISTORTED_QUALOT_BERRY, "Distorted Qualot Berry");
-        tooltip(HorizonCobblemonItems.DISTORTED_QUALOT_BERRY, "Sets the Pokémon's Defense EVs to %s");
+        tooltip(HorizonCobblemonItems.DISTORTED_QUALOT_BERRY, "Resets the Pokémon's Defense EVs to %s");
         addItem(HorizonCobblemonItems.DISTORTED_HONDEW_BERRY, "Distorted Hondew Berry");
-        tooltip(HorizonCobblemonItems.DISTORTED_HONDEW_BERRY, "Sets the Pokémon's Sp. Atk EVs to %s");
+        tooltip(HorizonCobblemonItems.DISTORTED_HONDEW_BERRY, "Resets the Pokémon's Special Attack EVs to %s");
         addItem(HorizonCobblemonItems.DISTORTED_GREPA_BERRY, "Distorted Grepa Berry");
-        tooltip(HorizonCobblemonItems.DISTORTED_GREPA_BERRY, "Sets the Pokémon's Sp. Defense EVs to %s");
+        tooltip(HorizonCobblemonItems.DISTORTED_GREPA_BERRY, "Resets the Pokémon's Special Defense EVs to %s");
         addItem(HorizonCobblemonItems.DISTORTED_TAMATO_BERRY, "Distorted Tamato Berry");
-        tooltip(HorizonCobblemonItems.DISTORTED_TAMATO_BERRY, "Sets the Pokémon's HP Speed to %s");
+        tooltip(HorizonCobblemonItems.DISTORTED_TAMATO_BERRY, "Resets the Pokémon's HP Speed to %s");
 
         addItem(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER, "Health Phoenix Feather");
         tooltip(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER, "Sets the Pokémon's HP EVs to %s");
@@ -113,7 +113,7 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {
-        this.add("item." + key.get().getDescriptionId() + ".tooltip", tooltip);
+        this.add(key.get().getDescriptionId() + ".tooltip", tooltip);
     }
 
     public void tooltip(Supplier<? extends Item> key, String sub, String tooltip) {
