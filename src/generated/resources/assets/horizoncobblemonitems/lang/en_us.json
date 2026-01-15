@@ -107,5 +107,7 @@
   "item.horizoncobblemonitems.void_bottle_cap.tooltip": "Resets all of the Pokémon's effective IV stats to %s",
   "item.horizoncobblemonitems.weak_bottle_cap": "Weak Bottle Cap",
   "item.horizoncobblemonitems.weak_bottle_cap.tooltip": "Resets the Pokémon's effective Attack IV stat to %s",
+  "item.horizoncobblemonitems.wooden_bottle_cap": "Wooden Bottle Cap",
+  "item.horizoncobblemonitems.wooden_bottle_cap.tooltip": "Randomizes all of the Pokémon's effective IV stats",
   "itemGroup.horizoncobblemonitems": "Horizon Cobblemon Items"
 }

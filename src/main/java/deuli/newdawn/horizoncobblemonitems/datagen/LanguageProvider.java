@@ -50,6 +50,9 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HorizonCobblemonItems.SLOW_BOTTLE_CAP, "Slow Bottle Cap");
         tooltip(HorizonCobblemonItems.SLOW_BOTTLE_CAP, "Resets the Pokémon's effective Speed IV stat to %s");
 
+        addItem(HorizonCobblemonItems.WOODEN_BOTTLE_CAP, "Wooden Bottle Cap");
+        tooltip(HorizonCobblemonItems.WOODEN_BOTTLE_CAP, "Randomizes all of the Pokémon's effective IV stats");
+
         addItem(HorizonCobblemonItems.BASKET_BALL, "Baskét Ball");
         tooltip(HorizonCobblemonItems.BASKET_BALL, "Turns the Pokémon into a shiny Pokémon");
 

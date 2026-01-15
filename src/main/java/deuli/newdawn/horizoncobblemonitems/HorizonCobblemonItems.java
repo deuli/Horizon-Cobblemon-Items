@@ -51,6 +51,8 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> COWARD_BOTTLE_CAP = ITEMS.register("coward_bottle_cap", () -> new BottleCapItem(Rarity.RARE, 0, Set.of(Stats.SPECIAL_DEFENCE)));
     public static final DeferredItem<Item> SLOW_BOTTLE_CAP = ITEMS.register("slow_bottle_cap", () -> new BottleCapItem(Rarity.RARE, 0, Set.of(Stats.SPEED)));
 
+    public static final DeferredItem<Item> WOODEN_BOTTLE_CAP = ITEMS.register("wooden_bottle_cap", () -> new WoodenBottleCapItem(Stats.Companion.getPERMANENT()));
+
     public static final DeferredItem<Item> BASKET_BALL = ITEMS.register("basket_ball", BasketBallItem::new);
 
     public static final DeferredItem<Item> DEVOLUTION_SPRAY = ITEMS.register("devolution_spray", DevolutionSprayItem::new);
@@ -120,6 +122,8 @@ public class HorizonCobblemonItems {
                         output.accept(NUMB_BOTTLE_CAP.get());
                         output.accept(COWARD_BOTTLE_CAP.get());
                         output.accept(SLOW_BOTTLE_CAP.get());
+
+                        output.accept(WOODEN_BOTTLE_CAP.get());
 
                         output.accept(BASKET_BALL.get());
 
