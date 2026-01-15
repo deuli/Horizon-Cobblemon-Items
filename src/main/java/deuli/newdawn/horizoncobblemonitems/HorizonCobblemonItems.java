@@ -89,6 +89,8 @@ public class HorizonCobblemonItems {
     public static final DeferredItem<Item> CLEVER_PHOENIX_FEATHER = ITEMS.register("clever_phoenix_feather", () -> new EVSetItem(EVs.MAX_STAT_VALUE, Set.of(Stats.SPECIAL_DEFENCE)));
     public static final DeferredItem<Item> SWIFT_PHOENIX_FEATHER = ITEMS.register("swift_phoenix_feather", () -> new EVSetItem(EVs.MAX_STAT_VALUE, Set.of(Stats.SPEED)));
 
+    public static final DeferredItem<Item> MAGIC_8_BALL = ITEMS.register("magic_8_ball", Magic8BallItem::new);
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> HCI_TAB = CREATIVE_MODE_TABS.register("horizon_cobblemon_items_tab", () ->
             CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
@@ -151,6 +153,8 @@ public class HorizonCobblemonItems {
                         output.accept(GENIUS_PHOENIX_FEATHER.get());
                         output.accept(CLEVER_PHOENIX_FEATHER.get());
                         output.accept(SWIFT_PHOENIX_FEATHER.get());
+
+                        output.accept(MAGIC_8_BALL.get());
                     })
                     .build()
     );

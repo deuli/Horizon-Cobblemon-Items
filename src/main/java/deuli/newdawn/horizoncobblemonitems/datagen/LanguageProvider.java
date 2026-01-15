@@ -123,6 +123,10 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HorizonCobblemonItems.CLEVER_PHOENIX_FEATHER, "Sets the Pokémon's Sp. Defense EVs to %s");
         addItem(HorizonCobblemonItems.SWIFT_PHOENIX_FEATHER, "Swift Phoenix Feather");
         tooltip(HorizonCobblemonItems.SWIFT_PHOENIX_FEATHER, "Sets the Pokémon's Speed EVs to %s");
+
+        addItem(HorizonCobblemonItems.MAGIC_8_BALL, "Magic 8 Ball");
+        tooltip(HorizonCobblemonItems.MAGIC_8_BALL, "Swaps the Pokémon's current ball to the ball in the player's offhand");
+        itemResult(HorizonCobblemonItems.MAGIC_8_BALL, "fail", "You're not holding a Poké Ball in your offhand");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {
