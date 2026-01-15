@@ -76,6 +76,12 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HorizonCobblemonItems.GENDER_CHANGE_POTION, "Changes the Pokémon's gender");
 
         addItem(HorizonCobblemonItems.DAWN_BALL, "Dawn Ball");
+        tooltip(HorizonCobblemonItems.DAWN_BALL, "contains", "Contains");
+        tooltip(HorizonCobblemonItems.DAWN_BALL, "level", "Level");
+        tooltip(HorizonCobblemonItems.DAWN_BALL, "min_perfect_ivs", "Min Perfect IVs");
+        tooltip(HorizonCobblemonItems.DAWN_BALL, "error", "MissingNo.");
+        itemResult(HorizonCobblemonItems.DAWN_BALL, "success", "%s was added to your party!");
+        itemResult(HorizonCobblemonItems.DAWN_BALL, "fail", "Seems like this %s is empty...");
 
         addItem(HorizonCobblemonItems.VOID_FEATHER, "Void Feather");
         tooltip(HorizonCobblemonItems.VOID_FEATHER, "Resets all of the Pokémon's EVs to %s");
@@ -108,5 +114,13 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {
         this.add("item." + key.get().getDescriptionId() + ".tooltip", tooltip);
+    }
+
+    public void tooltip(Supplier<? extends Item> key, String sub, String tooltip) {
+        this.add(key.get().getDescriptionId() + ".tooltip." + sub, tooltip);
+    }
+
+    public void itemResult(Supplier<? extends Item> key, String result, String text) {
+        this.add(key.get().getDescriptionId() + "." + result, text);
     }
 }

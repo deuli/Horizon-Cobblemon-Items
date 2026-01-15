@@ -5,6 +5,8 @@ import com.cobblemon.mod.common.api.abilities.Abilities;
 import com.cobblemon.mod.common.api.abilities.AbilityTemplate;
 import com.cobblemon.mod.common.api.pokemon.Natures;
 import com.cobblemon.mod.common.api.pokemon.PokemonProperties;
+import com.cobblemon.mod.common.api.pokemon.stats.Stat;
+import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.pokemon.Gender;
 import com.cobblemon.mod.common.pokemon.Nature;
@@ -31,7 +33,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-// TODO: Replace components with translation keys
 public class DawnBall extends Item {
     public static final String SPACING = "   ";
 
@@ -50,7 +51,7 @@ public class DawnBall extends Item {
             if (properties.getSpecies() != null) {
                 PlayerPartyStore party = Cobblemon.INSTANCE.getStorage().getParty((ServerPlayer) player);
                 Pokemon pokemon = properties.create();
-                player.sendSystemMessage(Component.literal(pokemon.getDisplayName(false).getString() + " was added to your party!"));
+                player.sendSystemMessage(Component.translatable(getKey("success"), pokemon.getDisplayName(false)));
                 level.playSound(null, player.getOnPos(), SoundEvent.createVariableRangeEvent(MiscUtilsKt.cobblemonResource("poke_ball.break")), SoundSource.NEUTRAL, 0.25F, 1);
                 party.add(pokemon);
 
@@ -59,7 +60,7 @@ public class DawnBall extends Item {
             }
         }
 
-        player.displayClientMessage(Component.literal("Seems like this " + stackInHand.getItem().getName(stackInHand).getString() + " is empty...").withStyle(ChatFormatting.RED), true);
+        player.displayClientMessage(Component.translatable(getKey("fail"), stackInHand.getItem().getName(stackInHand)).withStyle(ChatFormatting.RED), true);
         return InteractionResultHolder.fail(stackInHand);
     }
 
@@ -67,7 +68,7 @@ public class DawnBall extends Item {
     public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext tooltipConComponent, @NotNull List<Component> components, @NotNull TooltipFlag tooltipFlag) {
         String pokemonComponent = itemStack.getComponents().get(HorizonCobblemonItems.POKEMON_PROPERTIES.get());
         if (pokemonComponent != null) {
-            components.add(Component.literal("Contains").withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.UNDERLINE));
+            components.add(Component.translatable(getKey("contains")).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.UNDERLINE));
 
             PokemonProperties properties = PokemonProperties.Companion.parse(pokemonComponent);
             if (properties.getSpecies() != null) {
@@ -75,7 +76,7 @@ public class DawnBall extends Item {
                 Gender gender = properties.getGender();
 
                 MutableComponent shinyComponent = isShiny ? Component.literal((char) 9733 + " ").withStyle(ChatFormatting.GOLD) : Component.empty();
-                MutableComponent nameComponent = Component.literal(properties.create().getDisplayName(false).getString());
+                MutableComponent nameComponent = properties.create().getDisplayName(false);
                 MutableComponent genderComponent = Component.empty();
                 if (gender != null) {
                     switch (gender) {
@@ -90,13 +91,18 @@ public class DawnBall extends Item {
                 Integer level = properties.getLevel();
                 if (level != null)
                     components.add(spacing()
-                            .append(Component.literal("Level: ").withStyle(ChatFormatting.AQUA))
+                            .append(Component.translatable(getKey("level")).withStyle(ChatFormatting.AQUA))
+                            .append(": ")
                             .append(String.valueOf(level))
                     );
 
                 String form = properties.getForm();
                 if (form != null)
-                    components.add(spacing().append("Form: ").append(form));
+                    components.add(spacing()
+                            .append(Component.translatable("cobblemon.ui.pokedex.info.form"))
+                            .append(": ")
+                            .append(form)
+                    );
 
                 String natureString = properties.getNature();
                 if (natureString != null) {
@@ -105,7 +111,8 @@ public class DawnBall extends Item {
                         Nature nature = Natures.getNature(identifier);
                         if (nature != null)
                             components.add(spacing()
-                                    .append(Component.literal("Nature: ").withStyle(ChatFormatting.YELLOW))
+                                    .append(Component.translatable("cobblemon.ui.info.nature").withStyle(ChatFormatting.YELLOW))
+                                    .append(": ")
                                     .append(Component.translatable(nature.getDisplayName()))
                             );
                     }
@@ -116,7 +123,8 @@ public class DawnBall extends Item {
                     AbilityTemplate abilityTemplate = Abilities.get(ability);
                     if (abilityTemplate != null)
                         components.add(spacing()
-                                .append(Component.literal("Ability: ").withStyle(ChatFormatting.GOLD))
+                                .append(Component.translatable("cobblemon.ui.info.ability").withStyle(ChatFormatting.GOLD))
+                                .append(": ")
                                 .append(Component.translatable(abilityTemplate.getDisplayName()))
                         );
                 }
@@ -124,14 +132,15 @@ public class DawnBall extends Item {
                 Integer minPerfectIVs = properties.getMinPerfectIVs();
                 if (minPerfectIVs != null)
                     components.add(spacing()
-                            .append(Component.literal("Min Perfect IVs: ").withColor(0xe084ff))
+                            .append(Component.translatable(getKey("min_perfect_ivs")).withColor(0xe084ff))
+                            .append(": ")
                             .append(String.valueOf(minPerfectIVs))
                     );
 
-                addPokemonStatsTooltips(components, properties.getIvs(), "IVs", 0xab65c2);
-                addPokemonStatsTooltips(components, properties.getEvs(), "EVs", 0xc2c265);
+                addPokemonStatsTooltips(components, properties.getIvs(), "ivs", 0xab65c2);
+                addPokemonStatsTooltips(components, properties.getEvs(), "evs", 0xc2c265);
             } else {
-                components.add(spacing().append(Component.literal("MissingNo.")));
+                components.add(spacing().append(Component.translatable(getKey("error"))));
             }
         }
     }
@@ -141,36 +150,29 @@ public class DawnBall extends Item {
     }
 
     private static MutableComponent spacing(int level) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < level; i++) sb.append(SPACING);
-        return Component.literal(sb.toString());
+        return Component.literal(SPACING.repeat(Math.max(0, level)));
     }
 
-    private static MutableComponent getWithStyleStat(String stat) {
-        MutableComponent statComponent;
-        if (stat.equals("HP"))
-            statComponent = Component.literal("HP: ").setStyle(Style.EMPTY.withColor(0x9ee865));
-        else if (stat.equals("ATTACK"))
-            statComponent = Component.literal("Attack: ").setStyle(Style.EMPTY.withColor(0xf5de69));
-        else if (stat.equals("DEFENCE"))
-            statComponent = Component.literal("Defence: ").setStyle(Style.EMPTY.withColor(0xf09a65));
-        else if (stat.equals("SPECIAL_ATTACK"))
-            statComponent = Component.literal("Sp. Attack: ").setStyle(Style.EMPTY.withColor(0x66d8f6));
-        else if (stat.equals("SPECIAL_DEFENCE"))
-            statComponent = Component.literal("Sp. Defence: ").setStyle(Style.EMPTY.withColor(0x899eea));
-        else if (stat.equals("SPEED"))
-            statComponent = Component.literal("Speed: ").setStyle(Style.EMPTY.withColor(0xe46cca));
-        else
-            statComponent = Component.literal(stat).withStyle(ChatFormatting.DARK_RED);
+    private static MutableComponent getWithStyleStat(Stat stat) {
+        MutableComponent statComponent = stat.getDisplayName().copy().append(": ");
+        switch (stat) {
+            case Stats.HP -> statComponent.setStyle(Style.EMPTY.withColor(0x9ee865));
+            case Stats.ATTACK -> statComponent.setStyle(Style.EMPTY.withColor(0xf5de69));
+            case Stats.DEFENCE -> statComponent.setStyle(Style.EMPTY.withColor(0xf09a65));
+            case Stats.SPECIAL_ATTACK -> statComponent.setStyle(Style.EMPTY.withColor(0x66d8f6));
+            case Stats.SPECIAL_DEFENCE -> statComponent.setStyle(Style.EMPTY.withColor(0x899eea));
+            case Stats.SPEED -> statComponent.setStyle(Style.EMPTY.withColor(0xe46cca));
+            default -> statComponent.withStyle(ChatFormatting.DARK_RED);
+        }
 
         return statComponent;
     }
 
     private static void addPokemonStatsTooltips(List<Component> tooltip, PokemonStats stats, String type, int color) {
         if (stats != null && stats.iterator().hasNext()) {
-            tooltip.add(spacing().append(Component.literal(type).setStyle(Style.EMPTY.withColor(color).withUnderlined(true))));
+            tooltip.add(spacing().append(Component.translatable("cobblemon.ui.stats." + type).setStyle(Style.EMPTY.withColor(color).withUnderlined(true))));
             stats.forEach(entry -> tooltip.add(spacing(2)
-                    .append(getWithStyleStat(String.valueOf(entry.getKey())))
+                    .append(getWithStyleStat(entry.getKey()))
                     .append(Component.literal(String.valueOf(entry.getValue()))
                             .setStyle(Style.EMPTY
                                     .withItalic(entry.getValue() == stats.getAcceptableRange().getEndInclusive())
@@ -179,5 +181,9 @@ public class DawnBall extends Item {
                     )
             ));
         }
+    }
+
+    private @NotNull String getKey(String sub) {
+        return getDescriptionId() + ".tooltip." + sub;
     }
 }
