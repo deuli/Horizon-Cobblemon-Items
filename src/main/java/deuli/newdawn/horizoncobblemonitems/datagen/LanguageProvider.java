@@ -140,6 +140,9 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HCIItems.POKE_TREAT, "Maxes a Pokémon's friendship");
         addItem(HCIItems.STALE_POKE_TREAT, "Stale Poké Treat");
         tooltip(HCIItems.STALE_POKE_TREAT, "Resets a Pokémon friendship to %s");
+
+        addItem(HCIItems.BLACK_HOLE_PONIGIRI, "Black Hole Ponigiri");
+        tooltip(HCIItems.BLACK_HOLE_PONIGIRI, "Resets a Pokémon fullness to %s");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {

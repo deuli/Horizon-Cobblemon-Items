@@ -82,4 +82,6 @@ public class HCIItems {
 
     public static final DeferredItem<Item> POKE_TREAT = ITEMS.register("poke_treat", () -> new PokeTreatItem(Rarity.RARE, Cobblemon.config.getMaxPokemonFriendship()));
     public static final DeferredItem<Item> STALE_POKE_TREAT = ITEMS.register("stale_poke_treat", () -> new PokeTreatItem(Rarity.UNCOMMON, 0));
+
+    public static final DeferredItem<Item> BLACK_HOLE_PONIGIRI = ITEMS.register("black_hole_ponigiri", () -> new BlackHolePonigiri(0));
 }

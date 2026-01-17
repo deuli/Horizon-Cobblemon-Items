@@ -81,6 +81,8 @@ public class HCICreativeModeTabs {
 
                         output.accept(HCIItems.POKE_TREAT.get());
                         output.accept(HCIItems.STALE_POKE_TREAT.get());
+
+                        output.accept(HCIItems.BLACK_HOLE_PONIGIRI.get());
                     })
                     .build()
     );
