@@ -1,6 +1,7 @@
 package deuli.newdawn.horizoncobblemonitems;
 
 import com.mojang.logging.LogUtils;
+import deuli.newdawn.horizoncobblemonitems.registry.Aliases;
 import deuli.newdawn.horizoncobblemonitems.registry.HCICreativeModeTabs;
 import deuli.newdawn.horizoncobblemonitems.registry.HCIDataComponentTypes;
 import deuli.newdawn.horizoncobblemonitems.registry.HCIItems;
@@ -15,6 +16,7 @@ public class HorizonCobblemonItems {
 
     public HorizonCobblemonItems(IEventBus modEventBus) {
         HCIItems.ITEMS.register(modEventBus);
+        Aliases.addAliases();
         HCICreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         HCIDataComponentTypes.DATA_COMPONENT_TYPES.register(modEventBus);
     }
