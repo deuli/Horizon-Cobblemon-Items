@@ -1,6 +1,7 @@
 package deuli.newdawn.horizoncobblemonitems.datagen;
 
 import deuli.newdawn.horizoncobblemonitems.HorizonCobblemonItems;
+import deuli.newdawn.horizoncobblemonitems.registry.HCIItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -11,67 +12,67 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
 
     @Override
     protected void registerModels() {
-        basicItem(HorizonCobblemonItems.GOLDEN_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.VOID_BOTTLE_CAP.get());
+        basicItem(HCIItems.GOLDEN_BOTTLE_CAP.get());
+        basicItem(HCIItems.VOID_BOTTLE_CAP.get());
 
-        basicItem(HorizonCobblemonItems.SILVER_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.HEALTH_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.MIGHTY_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.TOUGH_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.SMART_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.COURAGE_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.QUICK_BOTTLE_CAP.get());
+        basicItem(HCIItems.SILVER_BOTTLE_CAP.get());
+        basicItem(HCIItems.HEALTH_BOTTLE_CAP.get());
+        basicItem(HCIItems.MIGHTY_BOTTLE_CAP.get());
+        basicItem(HCIItems.TOUGH_BOTTLE_CAP.get());
+        basicItem(HCIItems.SMART_BOTTLE_CAP.get());
+        basicItem(HCIItems.COURAGE_BOTTLE_CAP.get());
+        basicItem(HCIItems.QUICK_BOTTLE_CAP.get());
 
-        basicItem(HorizonCobblemonItems.OBSIDIAN_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.SICKLY_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.WEAK_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.BRITTLE_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.NUMB_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.COWARD_BOTTLE_CAP.get());
-        basicItem(HorizonCobblemonItems.SLOW_BOTTLE_CAP.get());
+        basicItem(HCIItems.OBSIDIAN_BOTTLE_CAP.get());
+        basicItem(HCIItems.SICKLY_BOTTLE_CAP.get());
+        basicItem(HCIItems.WEAK_BOTTLE_CAP.get());
+        basicItem(HCIItems.BRITTLE_BOTTLE_CAP.get());
+        basicItem(HCIItems.NUMB_BOTTLE_CAP.get());
+        basicItem(HCIItems.COWARD_BOTTLE_CAP.get());
+        basicItem(HCIItems.SLOW_BOTTLE_CAP.get());
 
-        basicItem(HorizonCobblemonItems.WOODEN_BOTTLE_CAP.get());
+        basicItem(HCIItems.WOODEN_BOTTLE_CAP.get());
 
-        basicItem(HorizonCobblemonItems.DEVOLUTION_SPRAY.get());
+        basicItem(HCIItems.DEVOLUTION_SPRAY.get());
 
-        basicItem(HorizonCobblemonItems.COMMON_CANDY.get());
-        basicItem(HorizonCobblemonItems.UNCOMMON_CANDY.get());
-        basicItem(HorizonCobblemonItems.ULTRA_RARE_CANDY.get());
+        basicItem(HCIItems.COMMON_CANDY.get());
+        basicItem(HCIItems.UNCOMMON_CANDY.get());
+        basicItem(HCIItems.ULTRA_RARE_CANDY.get());
 
-        basicItem(HorizonCobblemonItems.ULTIMATE_MAC_AND_CHEESE.get());
-        basicItem(HorizonCobblemonItems.SPICY_MAC_AND_CHEESE.get());
-        basicItem(HorizonCobblemonItems.DRY_MAC_AND_CHEESE.get());
-        basicItem(HorizonCobblemonItems.SWEET_MAC_AND_CHEESE.get());
-        basicItem(HorizonCobblemonItems.SOUR_MAC_AND_CHEESE.get());
-        basicItem(HorizonCobblemonItems.BITTER_MAC_AND_CHEESE.get());
+        basicItem(HCIItems.ULTIMATE_MAC_AND_CHEESE.get());
+        basicItem(HCIItems.SPICY_MAC_AND_CHEESE.get());
+        basicItem(HCIItems.DRY_MAC_AND_CHEESE.get());
+        basicItem(HCIItems.SWEET_MAC_AND_CHEESE.get());
+        basicItem(HCIItems.SOUR_MAC_AND_CHEESE.get());
+        basicItem(HCIItems.BITTER_MAC_AND_CHEESE.get());
 
-        basicItem(HorizonCobblemonItems.GENDER_CHANGE_POTION.get());
+        basicItem(HCIItems.GENDER_CHANGE_POTION.get());
 
-        basicItem(HorizonCobblemonItems.AXIOM_BERRY.get());
-        basicItem(HorizonCobblemonItems.DISTORTED_POMEG_BERRY.get());
-        basicItem(HorizonCobblemonItems.DISTORTED_KELPSY_BERRY.get());
-        basicItem(HorizonCobblemonItems.DISTORTED_QUALOT_BERRY.get());
-        basicItem(HorizonCobblemonItems.DISTORTED_HONDEW_BERRY.get());
-        basicItem(HorizonCobblemonItems.DISTORTED_GREPA_BERRY.get());
-        basicItem(HorizonCobblemonItems.DISTORTED_TAMATO_BERRY.get());
+        basicItem(HCIItems.AXIOM_BERRY.get());
+        basicItem(HCIItems.DISTORTED_POMEG_BERRY.get());
+        basicItem(HCIItems.DISTORTED_KELPSY_BERRY.get());
+        basicItem(HCIItems.DISTORTED_QUALOT_BERRY.get());
+        basicItem(HCIItems.DISTORTED_HONDEW_BERRY.get());
+        basicItem(HCIItems.DISTORTED_GREPA_BERRY.get());
+        basicItem(HCIItems.DISTORTED_TAMATO_BERRY.get());
 
-        basicItem(HorizonCobblemonItems.SHADOW_HEALTH_FEATHER.get());
-        basicItem(HorizonCobblemonItems.SHADOW_MUSCLE_FEATHER.get());
-        basicItem(HorizonCobblemonItems.SHADOW_RESIST_FEATHER.get());
-        basicItem(HorizonCobblemonItems.SHADOW_GENIUS_FEATHER.get());
-        basicItem(HorizonCobblemonItems.SHADOW_CLEVER_FEATHER.get());
-        basicItem(HorizonCobblemonItems.SHADOW_SWIFT_FEATHER.get());
+        basicItem(HCIItems.SHADOW_HEALTH_FEATHER.get());
+        basicItem(HCIItems.SHADOW_MUSCLE_FEATHER.get());
+        basicItem(HCIItems.SHADOW_RESIST_FEATHER.get());
+        basicItem(HCIItems.SHADOW_GENIUS_FEATHER.get());
+        basicItem(HCIItems.SHADOW_CLEVER_FEATHER.get());
+        basicItem(HCIItems.SHADOW_SWIFT_FEATHER.get());
 
-        basicItem(HorizonCobblemonItems.HEALTH_PHOENIX_FEATHER.get());
-        basicItem(HorizonCobblemonItems.MUSCLE_PHOENIX_FEATHER.get());
-        basicItem(HorizonCobblemonItems.RESIST_PHOENIX_FEATHER.get());
-        basicItem(HorizonCobblemonItems.GENIUS_PHOENIX_FEATHER.get());
-        basicItem(HorizonCobblemonItems.CLEVER_PHOENIX_FEATHER.get());
-        basicItem(HorizonCobblemonItems.SWIFT_PHOENIX_FEATHER.get());
+        basicItem(HCIItems.HEALTH_PHOENIX_FEATHER.get());
+        basicItem(HCIItems.MUSCLE_PHOENIX_FEATHER.get());
+        basicItem(HCIItems.RESIST_PHOENIX_FEATHER.get());
+        basicItem(HCIItems.GENIUS_PHOENIX_FEATHER.get());
+        basicItem(HCIItems.CLEVER_PHOENIX_FEATHER.get());
+        basicItem(HCIItems.SWIFT_PHOENIX_FEATHER.get());
 
-        basicItem(HorizonCobblemonItems.MAGIC_8_BALL.get());
+        basicItem(HCIItems.MAGIC_8_BALL.get());
 
-        basicItem(HorizonCobblemonItems.POKE_TREAT.get());
-        basicItem(HorizonCobblemonItems.STALE_POKE_TREAT.get());
+        basicItem(HCIItems.POKE_TREAT.get());
+        basicItem(HCIItems.STALE_POKE_TREAT.get());
     }
 }

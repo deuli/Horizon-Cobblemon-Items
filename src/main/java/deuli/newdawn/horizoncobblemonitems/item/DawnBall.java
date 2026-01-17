@@ -13,7 +13,7 @@ import com.cobblemon.mod.common.pokemon.Nature;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.cobblemon.mod.common.pokemon.PokemonStats;
 import com.cobblemon.mod.common.util.MiscUtilsKt;
-import deuli.newdawn.horizoncobblemonitems.HorizonCobblemonItems;
+import deuli.newdawn.horizoncobblemonitems.registry.HCIDataComponentTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -46,7 +46,7 @@ public class DawnBall extends Item {
         ItemStack stackInHand = player.getItemInHand(hand);
         if (level.isClientSide) return InteractionResultHolder.pass(stackInHand);
 
-        String pokemonComponent = stackInHand.get(HorizonCobblemonItems.POKEMON_PROPERTIES.get());
+        String pokemonComponent = stackInHand.get(HCIDataComponentTypes.POKEMON_PROPERTIES.get());
         if (pokemonComponent != null) {
             PokemonProperties properties = PokemonProperties.Companion.parse(pokemonComponent);
             if (properties.getSpecies() != null) {
@@ -67,7 +67,7 @@ public class DawnBall extends Item {
 
     @Override
     public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext tooltipConComponent, @NotNull List<Component> components, @NotNull TooltipFlag tooltipFlag) {
-        String pokemonComponent = itemStack.getComponents().get(HorizonCobblemonItems.POKEMON_PROPERTIES.get());
+        String pokemonComponent = itemStack.getComponents().get(HCIDataComponentTypes.POKEMON_PROPERTIES.get());
         if (pokemonComponent != null) {
             components.add(Component.translatable(getKey("contains")).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.UNDERLINE));
 
