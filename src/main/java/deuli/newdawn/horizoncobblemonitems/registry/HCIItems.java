@@ -84,4 +84,12 @@ public class HCIItems {
     public static final DeferredItem<Item> STALE_POKE_TREAT = ITEMS.register("stale_poke_treat", () -> new PokeTreatItem(Rarity.UNCOMMON, 0));
 
     public static final DeferredItem<Item> BLACK_HOLE_PONIGIRI = ITEMS.register("black_hole_ponigiri", () -> new BlackHolePonigiri(0));
+
+    public static final DeferredItem<Item> PRISMATIC_CARAT = ITEMS.register("prismatic_carat", () -> new CaratItem(Rarity.EPIC, Stats.Companion.getPERMANENT()));
+    public static final DeferredItem<Item> YELLOW_CARAT = ITEMS.register("yellow_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.HP)));
+    public static final DeferredItem<Item> RED_CARAT = ITEMS.register("red_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.ATTACK)));
+    public static final DeferredItem<Item> BLUE_CARAT = ITEMS.register("blue_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.DEFENCE)));
+    public static final DeferredItem<Item> PINK_CARAT = ITEMS.register("pink_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.SPECIAL_ATTACK)));
+    public static final DeferredItem<Item> GREEN_CARAT = ITEMS.register("green_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.SPECIAL_DEFENCE)));
+    public static final DeferredItem<Item> CYAN_CARAT = ITEMS.register("cyan_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.SPEED)));
 }

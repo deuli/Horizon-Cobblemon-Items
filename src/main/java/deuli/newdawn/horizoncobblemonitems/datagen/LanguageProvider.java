@@ -143,6 +143,21 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
         addItem(HCIItems.BLACK_HOLE_PONIGIRI, "Black Hole Ponigiri");
         tooltip(HCIItems.BLACK_HOLE_PONIGIRI, "Resets a Pokémon fullness to %s");
+
+        addItem(HCIItems.PRISMATIC_CARAT, "Prismatic Carat");
+        tooltip(HCIItems.PRISMATIC_CARAT, "Transforms a Pokémon's effective IV stats into their actual IV stats");
+        addItem(HCIItems.YELLOW_CARAT, "Yellow Carat");
+        tooltip(HCIItems.YELLOW_CARAT, "Transforms a Pokémon's effective HP IV stat into their actual IV HP stat");
+        addItem(HCIItems.RED_CARAT, "Red Carat");
+        tooltip(HCIItems.RED_CARAT, "Transforms a Pokémon's effective IV Attack stat into their actual IV Attack stat");
+        addItem(HCIItems.BLUE_CARAT, "Blue Carat");
+        tooltip(HCIItems.BLUE_CARAT, "Transforms a Pokémon's effective IV Defense stat into their actual IV Defense stat");
+        addItem(HCIItems.PINK_CARAT, "Pink Carat");
+        tooltip(HCIItems.PINK_CARAT, "Transforms a Pokémon's effective IV Special Attack stat into their actual IV Special Attack stat");
+        addItem(HCIItems.GREEN_CARAT, "Green Carat");
+        tooltip(HCIItems.GREEN_CARAT, "Transforms a Pokémon's effective IV Special Defense stat into their actual IV Special Defense stat");
+        addItem(HCIItems.CYAN_CARAT, "Cyan Carat");
+        tooltip(HCIItems.CYAN_CARAT, "Transforms a Pokémon's effective IV Speed stat into their actual IV Speed stat");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {

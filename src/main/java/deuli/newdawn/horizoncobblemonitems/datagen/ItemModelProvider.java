@@ -76,5 +76,13 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(HCIItems.STALE_POKE_TREAT.get());
 
         basicItem(HCIItems.BLACK_HOLE_PONIGIRI.get());
+
+        basicItem(HCIItems.PRISMATIC_CARAT.get());
+        basicItem(HCIItems.YELLOW_CARAT.get());
+        basicItem(HCIItems.RED_CARAT.get());
+        basicItem(HCIItems.BLUE_CARAT.get());
+        basicItem(HCIItems.PINK_CARAT.get());
+        basicItem(HCIItems.GREEN_CARAT.get());
+        basicItem(HCIItems.CYAN_CARAT.get());
     }
 }

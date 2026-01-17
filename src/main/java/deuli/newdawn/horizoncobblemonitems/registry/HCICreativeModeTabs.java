@@ -83,6 +83,14 @@ public class HCICreativeModeTabs {
                         output.accept(HCIItems.STALE_POKE_TREAT.get());
 
                         output.accept(HCIItems.BLACK_HOLE_PONIGIRI.get());
+
+                        output.accept(HCIItems.PRISMATIC_CARAT.get());
+                        output.accept(HCIItems.YELLOW_CARAT.get());
+                        output.accept(HCIItems.RED_CARAT.get());
+                        output.accept(HCIItems.BLUE_CARAT.get());
+                        output.accept(HCIItems.PINK_CARAT.get());
+                        output.accept(HCIItems.GREEN_CARAT.get());
+                        output.accept(HCIItems.CYAN_CARAT.get());
                     })
                     .build()
     );
