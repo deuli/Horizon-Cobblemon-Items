@@ -84,5 +84,8 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(HCIItems.PINK_CARAT.get());
         basicItem(HCIItems.GREEN_CARAT.get());
         basicItem(HCIItems.CYAN_CARAT.get());
+
+        basicItem(HCIItems.PORYPHONE.get());
+        basicItem(HCIItems.PORYPHONE2.get());
     }
 }

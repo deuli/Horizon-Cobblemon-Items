@@ -91,6 +91,9 @@ public class HCICreativeModeTabs {
                         output.accept(HCIItems.PINK_CARAT.get());
                         output.accept(HCIItems.GREEN_CARAT.get());
                         output.accept(HCIItems.CYAN_CARAT.get());
+
+                        output.accept(HCIItems.PORYPHONE.get());
+                        output.accept(HCIItems.PORYPHONE2.get());
                     })
                     .build()
     );

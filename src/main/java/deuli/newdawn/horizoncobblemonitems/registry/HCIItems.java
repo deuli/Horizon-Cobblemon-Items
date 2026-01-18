@@ -92,4 +92,7 @@ public class HCIItems {
     public static final DeferredItem<Item> PINK_CARAT = ITEMS.register("pink_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.SPECIAL_ATTACK)));
     public static final DeferredItem<Item> GREEN_CARAT = ITEMS.register("green_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.SPECIAL_DEFENCE)));
     public static final DeferredItem<Item> CYAN_CARAT = ITEMS.register("cyan_carat", () -> new CaratItem(Rarity.RARE, Set.of(Stats.SPEED)));
+
+    public static final DeferredItem<Item> PORYPHONE = ITEMS.register("poryphone", () -> new PoryphoneItem(Rarity.RARE, false));
+    public static final DeferredItem<Item> PORYPHONE2 = ITEMS.register("poryphone2", () -> new PoryphoneItem(Rarity.EPIC, true));
 }

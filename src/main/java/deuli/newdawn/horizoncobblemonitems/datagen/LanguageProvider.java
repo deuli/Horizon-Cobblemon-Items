@@ -158,6 +158,11 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HCIItems.GREEN_CARAT, "Transforms a Pokémon's effective IV Special Defense stat into their actual IV Special Defense stat");
         addItem(HCIItems.CYAN_CARAT, "Cyan Carat");
         tooltip(HCIItems.CYAN_CARAT, "Transforms a Pokémon's effective IV Speed stat into their actual IV Speed stat");
+
+        addItem(HCIItems.PORYPHONE, "Poryphone");
+        tooltip(HCIItems.PORYPHONE, "Brings the Pokémon model in the player's offhand to life");
+        addItem(HCIItems.PORYPHONE2, "Poryphone2");
+        tooltip(HCIItems.PORYPHONE2, "Adds the Pokémon model in the player's offhand to the player's party");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {
