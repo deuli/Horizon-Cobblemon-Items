@@ -34,10 +34,10 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class DawnBall extends Item {
+public class DawnBallItem extends Item {
     public static final String SPACING = "   ";
 
-    public DawnBall() {
+    public DawnBallItem() {
         super(new Item.Properties().rarity(Rarity.EPIC));
     }
 

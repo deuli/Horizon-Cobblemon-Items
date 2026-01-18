@@ -54,7 +54,7 @@ public class HCIItems {
 
     public static final DeferredItem<Item> GENDER_CHANGE_POTION = ITEMS.register("gender_change_potion", GenderChangePotionItem::new);
 
-    public static final DeferredItem<Item> DAWN_BALL = ITEMS.register("dawn_ball", DawnBall::new);
+    public static final DeferredItem<Item> DAWN_BALL = ITEMS.register("dawn_ball", DawnBallItem::new);
 
     public static final DeferredItem<Item> AXIOM_BERRY = ITEMS.register("axiom_berry", () -> new EVSetItem(Rarity.RARE, 0, Stats.Companion.getPERMANENT()));
     public static final DeferredItem<Item> DISTORTED_POMEG_BERRY = ITEMS.register("distorted_pomeg_berry", () -> new EVSetItem(Rarity.RARE, 0, Set.of(Stats.HP)));
