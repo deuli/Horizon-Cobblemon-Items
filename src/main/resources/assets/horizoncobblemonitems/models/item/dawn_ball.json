@@ -8,9 +8,6 @@
         "gui": {
             "parent": "horizoncobblemonitems:item/dawn_ball_in_gui"
         },
-        "ground": {
-            "parent": "horizoncobblemonitems:item/dawn_ball_in_gui"
-        },
         "fixed": {
             "parent": "horizoncobblemonitems:item/dawn_ball_in_gui"
         }
