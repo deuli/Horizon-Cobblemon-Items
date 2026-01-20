@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "horizoncobblemonitems:item/omnipotent_hidden_machine"
+  }
+}

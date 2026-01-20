@@ -163,6 +163,19 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HCIItems.PORYPHONE, "Brings the Pokémon model in the player's offhand to life");
         addItem(HCIItems.PORYPHONE2, "Poryphone2");
         tooltip(HCIItems.PORYPHONE2, "Adds the Pokémon model in the player's offhand to the player's party");
+
+        addItem(HCIItems.OMNIPOTENT_HIDDEN_MACHINE, "Omnipotent Hidden Machine");
+        tooltip(HCIItems.OMNIPOTENT_HIDDEN_MACHINE, "Teaches the Pokémon all of their moves");
+        addItem(HCIItems.TM_HIDDEN_MACHINE, "TM Hidden Machine");
+        tooltip(HCIItems.TM_HIDDEN_MACHINE, "Teaches the Pokémon all of their TM moves");
+        addItem(HCIItems.EGG_HIDDEN_MACHINE, "Egg Hidden Machine");
+        tooltip(HCIItems.EGG_HIDDEN_MACHINE, "Teaches the Pokémon all of their egg moves");
+        addItem(HCIItems.TUTOR_HIDDEN_MACHINE, "Tutor Hidden Machine");
+        tooltip(HCIItems.TUTOR_HIDDEN_MACHINE, "Teaches the Pokémon all of their tutor moves");
+        addItem(HCIItems.LEGACY_HIDDEN_MACHINE, "Legacy Hidden Machine");
+        tooltip(HCIItems.LEGACY_HIDDEN_MACHINE, "Teaches the Pokémon all of their legacy moves");
+        addItem(HCIItems.SPECIAL_HIDDEN_MACHINE, "Special Hidden Machine");
+        tooltip(HCIItems.SPECIAL_HIDDEN_MACHINE, "Teaches the Pokémon all of their special moves");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {

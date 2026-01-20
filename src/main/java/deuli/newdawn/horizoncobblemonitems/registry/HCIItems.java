@@ -95,4 +95,11 @@ public class HCIItems {
 
     public static final DeferredItem<Item> PORYPHONE = ITEMS.register("poryphone", () -> new PoryphoneItem(Rarity.RARE, false));
     public static final DeferredItem<Item> PORYPHONE2 = ITEMS.register("poryphone2", () -> new PoryphoneItem(Rarity.EPIC, true));
+
+    public static final DeferredItem<Item> OMNIPOTENT_HIDDEN_MACHINE = ITEMS.register("omnipotent_hidden_machine", () -> new HiddenMachineItem(Rarity.EPIC, Set.of(HiddenMachineItem.MoveType.TM, HiddenMachineItem.MoveType.EGG, HiddenMachineItem.MoveType.TUTOR, HiddenMachineItem.MoveType.LEGACY, HiddenMachineItem.MoveType.SPECIAL)));
+    public static final DeferredItem<Item> TM_HIDDEN_MACHINE = ITEMS.register("tm_hidden_machine", () -> new HiddenMachineItem(Rarity.RARE, Set.of(HiddenMachineItem.MoveType.TM)));
+    public static final DeferredItem<Item> EGG_HIDDEN_MACHINE = ITEMS.register("egg_hidden_machine", () -> new HiddenMachineItem(Rarity.RARE, Set.of(HiddenMachineItem.MoveType.EGG)));
+    public static final DeferredItem<Item> TUTOR_HIDDEN_MACHINE = ITEMS.register("tutor_hidden_machine", () -> new HiddenMachineItem(Rarity.RARE, Set.of(HiddenMachineItem.MoveType.TUTOR)));
+    public static final DeferredItem<Item> LEGACY_HIDDEN_MACHINE = ITEMS.register("legacy_hidden_machine", () -> new HiddenMachineItem(Rarity.RARE, Set.of(HiddenMachineItem.MoveType.LEGACY)));
+    public static final DeferredItem<Item> SPECIAL_HIDDEN_MACHINE = ITEMS.register("special_hidden_machine", () -> new HiddenMachineItem(Rarity.RARE, Set.of(HiddenMachineItem.MoveType.SPECIAL)));
 }

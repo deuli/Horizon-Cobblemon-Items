@@ -94,6 +94,13 @@ public class HCICreativeModeTabs {
 
                         output.accept(HCIItems.PORYPHONE.get());
                         output.accept(HCIItems.PORYPHONE2.get());
+
+                        output.accept(HCIItems.OMNIPOTENT_HIDDEN_MACHINE.get());
+                        output.accept(HCIItems.TM_HIDDEN_MACHINE.get());
+                        output.accept(HCIItems.EGG_HIDDEN_MACHINE.get());
+                        output.accept(HCIItems.TUTOR_HIDDEN_MACHINE.get());
+                        output.accept(HCIItems.LEGACY_HIDDEN_MACHINE.get());
+                        output.accept(HCIItems.SPECIAL_HIDDEN_MACHINE.get());
                     })
                     .build()
     );

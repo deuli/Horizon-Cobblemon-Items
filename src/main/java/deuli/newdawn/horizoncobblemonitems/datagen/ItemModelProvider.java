@@ -87,5 +87,12 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
 
         basicItem(HCIItems.PORYPHONE.get());
         basicItem(HCIItems.PORYPHONE2.get());
+
+        basicItem(HCIItems.OMNIPOTENT_HIDDEN_MACHINE.get());
+        basicItem(HCIItems.TM_HIDDEN_MACHINE.get());
+        basicItem(HCIItems.EGG_HIDDEN_MACHINE.get());
+        basicItem(HCIItems.TUTOR_HIDDEN_MACHINE.get());
+        basicItem(HCIItems.LEGACY_HIDDEN_MACHINE.get());
+        basicItem(HCIItems.SPECIAL_HIDDEN_MACHINE.get());
     }
 }
