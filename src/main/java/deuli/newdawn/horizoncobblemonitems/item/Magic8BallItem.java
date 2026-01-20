@@ -7,7 +7,7 @@ import com.cobblemon.mod.common.item.CobblemonItem;
 import com.cobblemon.mod.common.item.PokeBallItem;
 import com.cobblemon.mod.common.item.battle.BagItem;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import net.minecraft.ChatFormatting;
+import deuli.newdawn.horizoncobblemonitems.Util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -63,17 +63,11 @@ public class Magic8BallItem extends CobblemonItem implements PokemonSelectingIte
 
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level world, @NotNull Player player, @NotNull InteractionHand hand) {
-        if (player instanceof ServerPlayer serverPlayer)
-            if (serverPlayer.getOffhandItem().getItem() instanceof PokeBallItem)
-                return use(serverPlayer, player.getItemInHand(hand));
-            else
-                serverPlayer.sendSystemMessage(Component.translatable(getDescriptionId() + ".fail").withStyle(ChatFormatting.RED), true);
-
-        return InteractionResultHolder.success(player.getItemInHand(hand));
+        return Util.use(this, player, hand);
     }
 
     @Override
     public void appendHoverText(ItemStack itemStack, @NotNull TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
-        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip").withStyle(ChatFormatting.GRAY));
+        Util.appendHoverText(componentList, itemStack);
     }
 }

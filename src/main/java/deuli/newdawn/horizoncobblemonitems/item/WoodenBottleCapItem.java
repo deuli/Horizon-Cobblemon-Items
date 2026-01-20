@@ -8,7 +8,7 @@ import com.cobblemon.mod.common.item.CobblemonItem;
 import com.cobblemon.mod.common.item.battle.BagItem;
 import com.cobblemon.mod.common.pokemon.IVs;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import net.minecraft.ChatFormatting;
+import deuli.newdawn.horizoncobblemonitems.Util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -37,15 +37,6 @@ public class WoodenBottleCapItem extends CobblemonItem implements PokemonSelecti
         return null;
     }
 
-//    private boolean canChangeIV(@NotNull Pokemon pokemon, Stat stat) {
-//        return pokemon.getIvs().getEffectiveBattleIV(stat) != ivSetAmount;
-//    }
-
-//    @Override
-//    public boolean canUseOnPokemon(@NotNull ItemStack stack, @NotNull Pokemon pokemon) {
-//        return targetStats.stream().anyMatch(stat -> canChangeIV(pokemon, stat));
-//    }
-
     @Override
     public @Nullable InteractionResultHolder<ItemStack> applyToPokemon(@NotNull ServerPlayer serverPlayer, @NotNull ItemStack itemStack, @NotNull Pokemon pokemon) {
         if (!canUseOnPokemon(itemStack, pokemon)) {
@@ -66,14 +57,11 @@ public class WoodenBottleCapItem extends CobblemonItem implements PokemonSelecti
 
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level world, @NotNull Player player, @NotNull InteractionHand hand) {
-        if (player instanceof ServerPlayer serverPlayer)
-            return use(serverPlayer, player.getItemInHand(hand));
-
-        return InteractionResultHolder.success(player.getItemInHand(hand));
+        return Util.use(this, player, hand);
     }
 
     @Override
     public void appendHoverText(ItemStack itemStack, @NotNull TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
-        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip").withStyle(ChatFormatting.GRAY));
+        Util.appendHoverText(componentList, itemStack);
     }
 }

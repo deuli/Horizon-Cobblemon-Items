@@ -2,27 +2,15 @@ package deuli.newdawn.horizoncobblemonitems.item;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.CobblemonSounds;
-import com.cobblemon.mod.common.api.abilities.Abilities;
-import com.cobblemon.mod.common.api.abilities.AbilityTemplate;
-import com.cobblemon.mod.common.api.pokemon.Natures;
-import com.cobblemon.mod.common.api.pokemon.PokemonProperties;
-import com.cobblemon.mod.common.api.pokemon.stats.Stat;
-import com.cobblemon.mod.common.api.pokemon.stats.Stats;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.item.PokemonItem;
 import com.cobblemon.mod.common.pokemon.*;
-import com.cobblemon.mod.common.util.MiscUtilsKt;
-import deuli.newdawn.horizoncobblemonitems.registry.HCIDataComponentTypes;
+import deuli.newdawn.horizoncobblemonitems.Util;
 import kotlin.Pair;
 import kotlin.Unit;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.Style;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -80,6 +68,6 @@ public class PoryphoneItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack itemStack, @NotNull TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
-        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip").withStyle(ChatFormatting.GRAY));
+        Util.appendHoverText(componentList, itemStack);
     }
 }

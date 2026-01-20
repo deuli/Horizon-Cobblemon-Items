@@ -9,7 +9,7 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.item.CobblemonItem;
 import com.cobblemon.mod.common.item.battle.BagItem;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import net.minecraft.ChatFormatting;
+import deuli.newdawn.horizoncobblemonitems.Util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -109,7 +109,7 @@ public class HiddenMachineItem extends CobblemonItem implements PokemonSelecting
 
     @Override
     public void appendHoverText(ItemStack itemStack, @NotNull TooltipContext tooltipContext, List<Component> componentList, @NotNull TooltipFlag tooltipFlag) {
-        componentList.add(Component.translatable(itemStack.getItem().getDescriptionId() + ".tooltip").withStyle(ChatFormatting.GRAY));
+        Util.appendHoverText(componentList, itemStack);
     }
 
     public enum MoveType {
