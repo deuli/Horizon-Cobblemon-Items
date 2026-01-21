@@ -1,37 +1,26 @@
 package deuli.newdawn.horizoncobblemonitems.item;
 
 import com.cobblemon.mod.common.CobblemonSounds;
-import com.cobblemon.mod.common.api.item.PokemonSelectingItem;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
-import com.cobblemon.mod.common.item.CobblemonItem;
-import com.cobblemon.mod.common.item.battle.BagItem;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import deuli.newdawn.horizoncobblemonitems.Util;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class BlackHolePonigiri extends CobblemonItem implements PokemonSelectingItem {
+public class BlackHolePonigiri extends AbstractHorizonItem {
     private final int fullnessSetAmount;
 
     public BlackHolePonigiri(int fullnessSetAmount) {
-        super(new Properties().rarity(Rarity.RARE));
+        super(Rarity.RARE);
         this.fullnessSetAmount = fullnessSetAmount;
-    }
-
-    @Override
-    public @Nullable BagItem getBagItem() {
-        return null;
     }
 
     @Override
@@ -54,11 +43,6 @@ public class BlackHolePonigiri extends CobblemonItem implements PokemonSelecting
             entity.playSound(CobblemonSounds.BERRY_EAT, 1F, 1F);
 
         return InteractionResultHolder.success(itemStack);
-    }
-
-    @Override
-    public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level world, @NotNull Player player, @NotNull InteractionHand hand) {
-        return Util.use(this, player, hand);
     }
 
     @Override
