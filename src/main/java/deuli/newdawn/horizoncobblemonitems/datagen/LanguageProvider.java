@@ -139,10 +139,10 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HCIItems.POKE_TREAT, "Poké Treat");
         tooltip(HCIItems.POKE_TREAT, "Maxes a Pokémon's friendship");
         addItem(HCIItems.STALE_POKE_TREAT, "Stale Poké Treat");
-        tooltip(HCIItems.STALE_POKE_TREAT, "Resets a Pokémon friendship to %s");
+        tooltip(HCIItems.STALE_POKE_TREAT, "Resets a Pokémon's friendship to %s");
 
         addItem(HCIItems.BLACK_HOLE_PONIGIRI, "Black Hole Ponigiri");
-        tooltip(HCIItems.BLACK_HOLE_PONIGIRI, "Resets a Pokémon fullness to %s");
+        tooltip(HCIItems.BLACK_HOLE_PONIGIRI, "Resets a Pokémon's fullness to %s");
 
         addItem(HCIItems.PRISMATIC_CARAT, "Prismatic Carat");
         tooltip(HCIItems.PRISMATIC_CARAT, "Transforms a Pokémon's effective IV stats into their actual IV stats");
