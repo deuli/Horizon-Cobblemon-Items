@@ -26,12 +26,11 @@ public class GiveDawnBallCommand {
     private static int giveDawnBall(CommandContext<CommandSourceStack> context) {
         PokemonProperties pokemonProperties = PokemonPropertiesArgumentType.Companion.getPokemonProperties(context, "pokemon");
         ItemStack stack = new ItemStack(HCIItems.DAWN_BALL.get());
-        if (!stack.has(HCIDataComponentTypes.POKEMON_PROPERTIES))
-            stack.set(HCIDataComponentTypes.POKEMON_PROPERTIES, pokemonProperties.asString(" "));
+        stack.set(HCIDataComponentTypes.POKEMON_PROPERTIES, pokemonProperties.asString(" "));
 
         ServerPlayer player = context.getSource().getPlayer();
         if (player != null) {
-            Component hoverableText = stack.getHoverName();
+            Component hoverableText = stack.getDisplayName();
             player.addItem(stack);
             context.getSource().sendSuccess(() ->
                     Component.literal("Gave 1 ")
