@@ -1,12 +1,14 @@
 package deuli.newdawn.horizoncobblemonitems;
 
 import com.mojang.logging.LogUtils;
+import deuli.newdawn.horizoncobblemonitems.command.GiveDawnBallCommand;
 import deuli.newdawn.horizoncobblemonitems.registry.Aliases;
 import deuli.newdawn.horizoncobblemonitems.registry.HCICreativeModeTabs;
 import deuli.newdawn.horizoncobblemonitems.registry.HCIDataComponentTypes;
 import deuli.newdawn.horizoncobblemonitems.registry.HCIItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
 
 @Mod(HorizonCobblemonItems.MOD_ID)
@@ -19,5 +21,6 @@ public class HorizonCobblemonItems {
         Aliases.addAliases();
         HCICreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         HCIDataComponentTypes.DATA_COMPONENT_TYPES.register(modEventBus);
+        NeoForge.EVENT_BUS.addListener(GiveDawnBallCommand::register);
     }
 }
