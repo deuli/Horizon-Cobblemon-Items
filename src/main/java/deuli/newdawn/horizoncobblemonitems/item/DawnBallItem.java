@@ -1,6 +1,7 @@
 package deuli.newdawn.horizoncobblemonitems.item;
 
 import com.cobblemon.mod.common.Cobblemon;
+import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.abilities.Abilities;
 import com.cobblemon.mod.common.api.abilities.AbilityTemplate;
 import com.cobblemon.mod.common.api.pokemon.Natures;
@@ -59,9 +60,14 @@ public class DawnBallItem extends Item {
                 stackInHand.consume(1, player);
                 return InteractionResultHolder.success(stackInHand);
             }
+        } else {
+            player.displayClientMessage(getFailComponent(stackInHand, getKey("empty")).withStyle(ChatFormatting.RED), true);
+            level.playSound(null, player.getOnPos(), SoundEvent.createVariableRangeEvent(MiscUtilsKt.cobblemonResource("poke_ball.shake")), SoundSource.NEUTRAL, 0.25F, 0.8F);
+            return InteractionResultHolder.fail(stackInHand);
         }
 
-        player.displayClientMessage(Component.translatable(getKey("fail"), stackInHand.getItem().getName(stackInHand)).withStyle(ChatFormatting.RED), true);
+        player.displayClientMessage(getFailComponent(stackInHand, getKey("fail")).withStyle(ChatFormatting.RED), true);
+        level.playSound(null, player.getOnPos(), SoundEvent.createVariableRangeEvent(MiscUtilsKt.cobblemonResource("poke_ball.shake")), SoundSource.NEUTRAL, 0.25F, 0.8F);
         return InteractionResultHolder.fail(stackInHand);
     }
 
@@ -69,22 +75,22 @@ public class DawnBallItem extends Item {
     public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext tooltipConComponent, @NotNull List<Component> components, @NotNull TooltipFlag tooltipFlag) {
         String pokemonComponent = itemStack.getComponents().get(HCIDataComponentTypes.POKEMON_PROPERTIES.get());
         if (pokemonComponent != null) {
-            components.add(Component.translatable(getKey("contains")).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.UNDERLINE));
+            components.add(Component.translatable(getTooltipKey("contains")).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.UNDERLINE));
 
             PokemonProperties properties = PokemonProperties.Companion.parse(pokemonComponent);
             if (properties.getSpecies() != null) {
                 boolean isShiny = properties.getShiny() != null && properties.getShiny();
                 Gender gender = properties.getGender();
 
-                MutableComponent shinyComponent = isShiny ? Component.literal((char) 9733 + " ").withStyle(ChatFormatting.GOLD) : Component.empty();
+                MutableComponent shinyComponent = isShiny ? Component.literal("★ ").withStyle(ChatFormatting.RED) : Component.empty();
                 MutableComponent nameComponent = properties.create().getDisplayName(false);
                 MutableComponent genderComponent = Component.empty();
                 if (gender != null) {
                     switch (gender) {
                         case MALE ->
-                                genderComponent = Component.literal(" " + (char) 9794).withStyle(ChatFormatting.DARK_BLUE);
+                                genderComponent = Component.literal(" ♂").withStyle(ChatFormatting.DARK_BLUE);
                         case FEMALE ->
-                                genderComponent = Component.literal(" " + (char) 9792).withStyle(ChatFormatting.LIGHT_PURPLE);
+                                genderComponent = Component.literal(" ♀").withStyle(ChatFormatting.LIGHT_PURPLE);
                     }
                 }
                 components.add(spacing().append(shinyComponent).append(nameComponent).append(genderComponent));
@@ -92,7 +98,7 @@ public class DawnBallItem extends Item {
                 Integer level = properties.getLevel();
                 if (level != null)
                     components.add(spacing()
-                            .append(Component.translatable(getKey("level")).withStyle(ChatFormatting.AQUA))
+                            .append(Component.translatable(getTooltipKey("level")).withStyle(ChatFormatting.AQUA))
                             .append(": ")
                             .append(String.valueOf(level))
                     );
@@ -133,7 +139,7 @@ public class DawnBallItem extends Item {
                 Integer minPerfectIVs = properties.getMinPerfectIVs();
                 if (minPerfectIVs != null)
                     components.add(spacing()
-                            .append(Component.translatable(getKey("min_perfect_ivs")).withColor(0xe084ff))
+                            .append(Component.translatable(getTooltipKey("min_perfect_ivs")).withColor(0xe084ff))
                             .append(": ")
                             .append(String.valueOf(minPerfectIVs))
                     );
@@ -141,9 +147,11 @@ public class DawnBallItem extends Item {
                 addPokemonStatsTooltips(components, properties.getIvs(), "ivs", 0xab65c2);
                 addPokemonStatsTooltips(components, properties.getEvs(), "evs", 0xc2c265);
             } else {
-                components.add(spacing().append(Component.translatable(getKey("error"))));
+                components.add(spacing().append(Component.translatable(getTooltipKey("error"))));
             }
         }
+        else
+            components.add(getFailComponent(itemStack, getTooltipKey("empty")).withStyle(ChatFormatting.RED));
     }
 
     private static MutableComponent spacing() {
@@ -185,6 +193,14 @@ public class DawnBallItem extends Item {
     }
 
     private @NotNull String getKey(String sub) {
+        return getDescriptionId() + "." + sub;
+    }
+
+    private @NotNull String getTooltipKey(String sub) {
         return getDescriptionId() + ".tooltip." + sub;
+    }
+
+    private @NotNull MutableComponent getFailComponent(ItemStack itemStack, String translationKey) {
+        return Component.translatable(translationKey, itemStack.getItem().getName(itemStack));
     }
 }

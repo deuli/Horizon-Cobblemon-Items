@@ -88,8 +88,10 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HCIItems.DAWN_BALL, "level", "Level");
         tooltip(HCIItems.DAWN_BALL, "min_perfect_ivs", "Min Perfect IVs");
         tooltip(HCIItems.DAWN_BALL, "error", "MissingNo.");
+        tooltip(HCIItems.DAWN_BALL, "empty", "Seems like this %s is empty...");
         itemResult(HCIItems.DAWN_BALL, "success", "%s was added to your party!");
-        itemResult(HCIItems.DAWN_BALL, "fail", "Seems like this %s is empty...");
+        itemResult(HCIItems.DAWN_BALL, "fail", "Something is preventing this %s from working...");
+        itemResult(HCIItems.DAWN_BALL, "empty", "Seems like this %s is empty...");
 
         addItem(HCIItems.AXIOM_BERRY, "Axiom Berry");
         tooltip(HCIItems.AXIOM_BERRY, "Resets all of the Pokémon's EVs to %s");
