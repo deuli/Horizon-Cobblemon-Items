@@ -15,6 +15,7 @@ public class HCICreativeModeTabs {
                     .title(Component.translatable("itemGroup.horizoncobblemonitems"))
                     .icon(() -> HCIItems.GOLDEN_BOTTLE_CAP.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
+                        // IVs
                         output.accept(HCIItems.GOLDEN_BOTTLE_CAP.get());
                         output.accept(HCIItems.VOID_BOTTLE_CAP.get());
 
@@ -36,25 +37,15 @@ public class HCICreativeModeTabs {
 
                         output.accept(HCIItems.WOODEN_BOTTLE_CAP.get());
 
-                        output.accept(HCIItems.BASKET_BALL.get());
+                        output.accept(HCIItems.PRISMATIC_CARAT.get());
+                        output.accept(HCIItems.YELLOW_CARAT.get());
+                        output.accept(HCIItems.RED_CARAT.get());
+                        output.accept(HCIItems.BLUE_CARAT.get());
+                        output.accept(HCIItems.PINK_CARAT.get());
+                        output.accept(HCIItems.GREEN_CARAT.get());
+                        output.accept(HCIItems.CYAN_CARAT.get());
 
-                        output.accept(HCIItems.DEVOLUTION_SPRAY.get());
-
-                        output.accept(HCIItems.COMMON_CANDY.get());
-                        output.accept(HCIItems.UNCOMMON_CANDY.get());
-                        output.accept(HCIItems.ULTRA_RARE_CANDY.get());
-
-                        output.accept(HCIItems.ULTIMATE_MAC_AND_CHEESE.get());
-                        output.accept(HCIItems.SPICY_MAC_AND_CHEESE.get());
-                        output.accept(HCIItems.DRY_MAC_AND_CHEESE.get());
-                        output.accept(HCIItems.SWEET_MAC_AND_CHEESE.get());
-                        output.accept(HCIItems.SOUR_MAC_AND_CHEESE.get());
-                        output.accept(HCIItems.BITTER_MAC_AND_CHEESE.get());
-
-                        output.accept(HCIItems.GENDER_CHANGE_POTION.get());
-
-                        output.accept(HCIItems.DAWN_BALL.get());
-
+                        // EVs
                         output.accept(HCIItems.AXIOM_BERRY.get());
                         output.accept(HCIItems.DISTORTED_POMEG_BERRY.get());
                         output.accept(HCIItems.DISTORTED_KELPSY_BERRY.get());
@@ -77,30 +68,40 @@ public class HCICreativeModeTabs {
                         output.accept(HCIItems.CLEVER_PHOENIX_FEATHER.get());
                         output.accept(HCIItems.SWIFT_PHOENIX_FEATHER.get());
 
-                        output.accept(HCIItems.MAGIC_8_BALL.get());
+                        // Levels
+                        output.accept(HCIItems.COMMON_CANDY.get());
+                        output.accept(HCIItems.UNCOMMON_CANDY.get());
+                        output.accept(HCIItems.ULTRA_RARE_CANDY.get());
 
-                        output.accept(HCIItems.POKE_TREAT.get());
-                        output.accept(HCIItems.STALE_POKE_TREAT.get());
+                        // Riding
+                        output.accept(HCIItems.ULTIMATE_MAC_AND_CHEESE.get());
+                        output.accept(HCIItems.SPICY_MAC_AND_CHEESE.get());
+                        output.accept(HCIItems.DRY_MAC_AND_CHEESE.get());
+                        output.accept(HCIItems.SWEET_MAC_AND_CHEESE.get());
+                        output.accept(HCIItems.SOUR_MAC_AND_CHEESE.get());
+                        output.accept(HCIItems.BITTER_MAC_AND_CHEESE.get());
 
-                        output.accept(HCIItems.BLACK_HOLE_PONIGIRI.get());
-
-                        output.accept(HCIItems.PRISMATIC_CARAT.get());
-                        output.accept(HCIItems.YELLOW_CARAT.get());
-                        output.accept(HCIItems.RED_CARAT.get());
-                        output.accept(HCIItems.BLUE_CARAT.get());
-                        output.accept(HCIItems.PINK_CARAT.get());
-                        output.accept(HCIItems.GREEN_CARAT.get());
-                        output.accept(HCIItems.CYAN_CARAT.get());
-
-                        output.accept(HCIItems.PORYPHONE.get());
-                        output.accept(HCIItems.PORYPHONE2.get());
-
+                        // Moves
                         output.accept(HCIItems.OMNIPOTENT_HIDDEN_MACHINE.get());
                         output.accept(HCIItems.TM_HIDDEN_MACHINE.get());
                         output.accept(HCIItems.EGG_HIDDEN_MACHINE.get());
                         output.accept(HCIItems.TUTOR_HIDDEN_MACHINE.get());
                         output.accept(HCIItems.LEGACY_HIDDEN_MACHINE.get());
                         output.accept(HCIItems.SPECIAL_HIDDEN_MACHINE.get());
+
+                        // Friendship
+                        output.accept(HCIItems.POKE_TREAT.get());
+                        output.accept(HCIItems.STALE_POKE_TREAT.get());
+
+                        // Other
+                        output.accept(HCIItems.BASKET_BALL.get());
+                        output.accept(HCIItems.DEVOLUTION_SPRAY.get());
+                        output.accept(HCIItems.GENDER_CHANGE_POTION.get());
+                        output.accept(HCIItems.MAGIC_8_BALL.get());
+                        output.accept(HCIItems.BLACK_HOLE_PONIGIRI.get());
+                        output.accept(HCIItems.PORYPHONE.get());
+                        output.accept(HCIItems.PORYPHONE2.get());
+                        output.accept(HCIItems.DAWN_BALL.get());
                     })
                     .build()
     );
