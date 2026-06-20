@@ -102,4 +102,6 @@ public class HCIItems {
     public static final DeferredItem<Item> TUTOR_HIDDEN_MACHINE = ITEMS.register("tutor_hidden_machine", () -> new HiddenMachineItem(Rarity.RARE, Set.of(HiddenMachineItem.MoveType.TUTOR)));
     public static final DeferredItem<Item> LEGACY_HIDDEN_MACHINE = ITEMS.register("legacy_hidden_machine", () -> new HiddenMachineItem(Rarity.RARE, Set.of(HiddenMachineItem.MoveType.LEGACY)));
     public static final DeferredItem<Item> SPECIAL_HIDDEN_MACHINE = ITEMS.register("special_hidden_machine", () -> new HiddenMachineItem(Rarity.RARE, Set.of(HiddenMachineItem.MoveType.SPECIAL)));
+
+    public static final DeferredItem<Item> BATTLE_GLOVE = ITEMS.register("battle_glove", BattleItem::new);
 }

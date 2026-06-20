@@ -178,6 +178,10 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         tooltip(HCIItems.LEGACY_HIDDEN_MACHINE, "Teaches the Pokémon all of their legacy moves");
         addItem(HCIItems.SPECIAL_HIDDEN_MACHINE, "Special Hidden Machine");
         tooltip(HCIItems.SPECIAL_HIDDEN_MACHINE, "Teaches the Pokémon all of their special moves");
+
+        addItem(HCIItems.BATTLE_GLOVE, "Battle Glove");
+        tooltip(HCIItems.BATTLE_GLOVE, "Forces a Pokémon battle with the player hit");
+        tooltip(HCIItems.BATTLE_GLOVE, "unknown_error", "Battle could not be initiated.");
     }
 
     public void tooltip(Supplier<? extends Item> key, String tooltip) {

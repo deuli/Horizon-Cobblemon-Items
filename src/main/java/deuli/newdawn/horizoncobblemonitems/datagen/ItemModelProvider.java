@@ -94,5 +94,7 @@ public class ItemModelProvider extends net.neoforged.neoforge.client.model.gener
         basicItem(HCIItems.TUTOR_HIDDEN_MACHINE.get());
         basicItem(HCIItems.LEGACY_HIDDEN_MACHINE.get());
         basicItem(HCIItems.SPECIAL_HIDDEN_MACHINE.get());
+
+        basicItem(HCIItems.BATTLE_GLOVE.get());
     }
 }

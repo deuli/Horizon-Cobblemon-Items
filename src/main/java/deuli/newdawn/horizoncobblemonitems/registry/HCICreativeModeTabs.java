@@ -102,6 +102,7 @@ public class HCICreativeModeTabs {
                         output.accept(HCIItems.PORYPHONE.get());
                         output.accept(HCIItems.PORYPHONE2.get());
                         output.accept(HCIItems.DAWN_BALL.get());
+                        output.accept(HCIItems.BATTLE_GLOVE.get());
                     })
                     .build()
     );

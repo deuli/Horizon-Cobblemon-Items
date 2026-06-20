@@ -1,7 +1,6 @@
 package deuli.newdawn.horizoncobblemonitems.item;
 
 import com.cobblemon.mod.common.Cobblemon;
-import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.api.abilities.Abilities;
 import com.cobblemon.mod.common.api.abilities.AbilityTemplate;
 import com.cobblemon.mod.common.api.pokemon.Natures;
@@ -14,6 +13,7 @@ import com.cobblemon.mod.common.pokemon.Nature;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import com.cobblemon.mod.common.pokemon.PokemonStats;
 import com.cobblemon.mod.common.util.MiscUtilsKt;
+import deuli.newdawn.horizoncobblemonitems.Util;
 import deuli.newdawn.horizoncobblemonitems.registry.HCIDataComponentTypes;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -53,7 +53,7 @@ public class DawnBallItem extends Item {
             if (properties.getSpecies() != null) {
                 PlayerPartyStore party = Cobblemon.INSTANCE.getStorage().getParty((ServerPlayer) player);
                 Pokemon pokemon = properties.create();
-                player.sendSystemMessage(Component.translatable(getKey("success"), pokemon.getDisplayName(false)));
+                player.sendSystemMessage(Component.translatable(Util.getKey(this, "success"), pokemon.getDisplayName(false)));
                 level.playSound(null, player.getOnPos(), SoundEvent.createVariableRangeEvent(MiscUtilsKt.cobblemonResource("poke_ball.break")), SoundSource.NEUTRAL, 0.25F, 1);
                 party.add(pokemon);
 
@@ -61,12 +61,12 @@ public class DawnBallItem extends Item {
                 return InteractionResultHolder.success(stackInHand);
             }
         } else {
-            player.displayClientMessage(getFailComponent(stackInHand, getKey("empty")).withStyle(ChatFormatting.RED), true);
+            player.displayClientMessage(getFailComponent(stackInHand, Util.getKey(this, "empty")).withStyle(ChatFormatting.RED), true);
             level.playSound(null, player.getOnPos(), SoundEvent.createVariableRangeEvent(MiscUtilsKt.cobblemonResource("poke_ball.shake")), SoundSource.NEUTRAL, 0.25F, 0.8F);
             return InteractionResultHolder.fail(stackInHand);
         }
 
-        player.displayClientMessage(getFailComponent(stackInHand, getKey("fail")).withStyle(ChatFormatting.RED), true);
+        player.displayClientMessage(getFailComponent(stackInHand, Util.getKey(this, "fail")).withStyle(ChatFormatting.RED), true);
         level.playSound(null, player.getOnPos(), SoundEvent.createVariableRangeEvent(MiscUtilsKt.cobblemonResource("poke_ball.shake")), SoundSource.NEUTRAL, 0.25F, 0.8F);
         return InteractionResultHolder.fail(stackInHand);
     }
@@ -75,7 +75,7 @@ public class DawnBallItem extends Item {
     public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext tooltipConComponent, @NotNull List<Component> components, @NotNull TooltipFlag tooltipFlag) {
         String pokemonComponent = itemStack.getComponents().get(HCIDataComponentTypes.POKEMON_PROPERTIES.get());
         if (pokemonComponent != null) {
-            components.add(Component.translatable(getTooltipKey("contains")).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.UNDERLINE));
+            components.add(Component.translatable(Util.getTooltipKey(this, "contains")).withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.UNDERLINE));
 
             PokemonProperties properties = PokemonProperties.Companion.parse(pokemonComponent);
             if (properties.getSpecies() != null) {
@@ -98,7 +98,7 @@ public class DawnBallItem extends Item {
                 Integer level = properties.getLevel();
                 if (level != null)
                     components.add(spacing()
-                            .append(Component.translatable(getTooltipKey("level")).withStyle(ChatFormatting.AQUA))
+                            .append(Component.translatable(Util.getTooltipKey(this, "level")).withStyle(ChatFormatting.AQUA))
                             .append(": ")
                             .append(String.valueOf(level))
                     );
@@ -139,7 +139,7 @@ public class DawnBallItem extends Item {
                 Integer minPerfectIVs = properties.getMinPerfectIVs();
                 if (minPerfectIVs != null)
                     components.add(spacing()
-                            .append(Component.translatable(getTooltipKey("min_perfect_ivs")).withColor(0xe084ff))
+                            .append(Component.translatable(Util.getTooltipKey(this, "min_perfect_ivs")).withColor(0xe084ff))
                             .append(": ")
                             .append(String.valueOf(minPerfectIVs))
                     );
@@ -147,11 +147,11 @@ public class DawnBallItem extends Item {
                 addPokemonStatsTooltips(components, properties.getIvs(), "ivs", 0xab65c2);
                 addPokemonStatsTooltips(components, properties.getEvs(), "evs", 0xc2c265);
             } else {
-                components.add(spacing().append(Component.translatable(getTooltipKey("error"))));
+                components.add(spacing().append(Component.translatable(Util.getTooltipKey(this, "error"))));
             }
         }
         else
-            components.add(getFailComponent(itemStack, getTooltipKey("empty")).withStyle(ChatFormatting.RED));
+            components.add(getFailComponent(itemStack, Util.getTooltipKey(this, "empty")).withStyle(ChatFormatting.RED));
     }
 
     private static MutableComponent spacing() {
@@ -190,14 +190,6 @@ public class DawnBallItem extends Item {
                     )
             ));
         }
-    }
-
-    private @NotNull String getKey(String sub) {
-        return getDescriptionId() + "." + sub;
-    }
-
-    private @NotNull String getTooltipKey(String sub) {
-        return getDescriptionId() + ".tooltip." + sub;
     }
 
     private @NotNull MutableComponent getFailComponent(ItemStack itemStack, String translationKey) {
