@@ -1,0 +1,9 @@
+{
+  "values": [
+    "horizoncobblemonitems:tm_hidden_machine",
+    "horizoncobblemonitems:egg_hidden_machine",
+    "horizoncobblemonitems:tutor_hidden_machine",
+    "horizoncobblemonitems:legacy_hidden_machine",
+    "horizoncobblemonitems:special_hidden_machine"
+  ]
+}

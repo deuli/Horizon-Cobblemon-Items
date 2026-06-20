@@ -1,0 +1,9 @@
+{
+  "values": [
+    "horizoncobblemonitems:golden_bottle_cap",
+    "horizoncobblemonitems:void_bottle_cap",
+    "horizoncobblemonitems:wooden_bottle_cap",
+    "#horizoncobblemonitems:silver_bottle_caps",
+    "#horizoncobblemonitems:obsidian_bottle_caps"
+  ]
+}
