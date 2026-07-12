@@ -217,6 +217,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addTag(() -> HCIItemTags.PORYPHONES, "Poryphones");
         addTag(() -> HCIItemTags.SET_HIDDEN_MACHINES, "Set Hidden Machines");
         addTag(() -> HCIItemTags.HIDDEN_MACHINES, "Hidden Machines");
+        addTag(() -> HCIItemTags.IV_ITEMS, "IV Items");
+        addTag(() -> HCIItemTags.EV_ITEMS, "EV Items");
     }
 
     private void tooltip(Supplier<? extends Item> key, String tooltip) {

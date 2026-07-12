@@ -35,6 +35,9 @@ public class HCIItemTags {
     public static final TagKey<Item> SET_HIDDEN_MACHINES = createTag("set_hidden_machines");
     public static final TagKey<Item> HIDDEN_MACHINES = createTag("hidden_machines");
 
+    public static final TagKey<Item> IV_ITEMS = createTag("iv_items");
+    public static final TagKey<Item> EV_ITEMS = createTag("ev_items");
+
     private static TagKey<Item> createTag(String path) {
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(HorizonCobblemonItems.MOD_ID, path));
     }

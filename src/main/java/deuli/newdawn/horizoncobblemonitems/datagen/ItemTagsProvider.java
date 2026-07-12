@@ -150,5 +150,13 @@ public class ItemTagsProvider extends net.minecraft.data.tags.ItemTagsProvider {
         tag(HCIItemTags.HIDDEN_MACHINES)
                 .add(HCIItems.OMNIPOTENT_HIDDEN_MACHINE.get())
                 .addTag(HCIItemTags.SET_HIDDEN_MACHINES);
+
+        tag(HCIItemTags.IV_ITEMS)
+                .addTag(HCIItemTags.BOTTLE_CAPS)
+                .addTag(HCIItemTags.CARATS);
+
+        tag(HCIItemTags.EV_ITEMS)
+                .addTag(HCIItemTags.BERRIES)
+                .addTag(HCIItemTags.FEATHERS);
     }
 }
