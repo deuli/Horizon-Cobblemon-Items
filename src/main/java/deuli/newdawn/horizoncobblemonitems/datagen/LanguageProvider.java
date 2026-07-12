@@ -1,8 +1,10 @@
 package deuli.newdawn.horizoncobblemonitems.datagen;
 
 import deuli.newdawn.horizoncobblemonitems.HorizonCobblemonItems;
+import deuli.newdawn.horizoncobblemonitems.registry.HCIItemTags;
 import deuli.newdawn.horizoncobblemonitems.registry.HCIItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 
 import java.util.function.Supplier;
@@ -24,7 +26,9 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         add("itemGroup.horizoncobblemonitems.friendship", "Friendship Items");
         add("itemGroup.horizoncobblemonitems.other", "Other");
 
+
         add("item.infinite", "Infinite");
+
 
         addItem(HCIItems.GOLDEN_BOTTLE_CAP, "Golden Bottle Cap");
         tooltip(HCIItems.GOLDEN_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %s");
@@ -192,17 +196,38 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addItem(HCIItems.BATTLE_GLOVE, "Battle Glove");
         tooltip(HCIItems.BATTLE_GLOVE, "Forces a Pokémon battle with the player hit");
         tooltip(HCIItems.BATTLE_GLOVE, "unknown_error", "Battle could not be initiated.");
+
+
+        addTag(() -> HCIItemTags.BOTTLE_CAPS, "Bottle Caps");
+        addTag(() -> HCIItemTags.SPECIFIC_SILVER_BOTTLE_CAPS, "Specific Silver Bottle Caps");
+        addTag(() -> HCIItemTags.SILVER_BOTTLE_CAPS, "Silver Bottle Caps");
+        addTag(() -> HCIItemTags.SPECIFIC_OBSIDIAN_BOTTLE_CAPS, "Specific Obsidian Bottle Caps");
+        addTag(() -> HCIItemTags.OBSIDIAN_BOTTLE_CAPS, "Obsidian Bottle Caps");
+        addTag(() -> HCIItemTags.CANDIES, "Candies");
+        addTag(() -> HCIItemTags.FLAVOR_MAC_AND_CHEESE, "Flavor Mac and Cheese");
+        addTag(() -> HCIItemTags.MAC_AND_CHEESE, "Mac and Cheese");
+        addTag(() -> HCIItemTags.DISTORTED_BERRIES, "Distorted Berries");
+        addTag(() -> HCIItemTags.BERRIES, "Berries");
+        addTag(() -> HCIItemTags.SHADOW_FEATHERS, "Shadow Feathers");
+        addTag(() -> HCIItemTags.PHOENIX_FEATHERS, "Phoenix Feathers");
+        addTag(() -> HCIItemTags.FEATHERS, "Feathers");
+        addTag(() -> HCIItemTags.POKE_TREATS, "Poké Treats");
+        addTag(() -> HCIItemTags.COLOR_CARATS, "Color Carats");
+        addTag(() -> HCIItemTags.CARATS, "Carats");
+        addTag(() -> HCIItemTags.PORYPHONES, "Poryphones");
+        addTag(() -> HCIItemTags.SET_HIDDEN_MACHINES, "Set Hidden Machines");
+        addTag(() -> HCIItemTags.HIDDEN_MACHINES, "Hidden Machines");
     }
 
-    public void tooltip(Supplier<? extends Item> key, String tooltip) {
+    private void tooltip(Supplier<? extends Item> key, String tooltip) {
         this.add(key.get().getDescriptionId() + ".tooltip", tooltip);
     }
 
-    public void tooltip(Supplier<? extends Item> key, String sub, String tooltip) {
+    private void tooltip(Supplier<? extends Item> key, String sub, String tooltip) {
         this.add(key.get().getDescriptionId() + ".tooltip." + sub, tooltip);
     }
 
-    public void itemResult(Supplier<? extends Item> key, String result, String text) {
+    private void itemResult(Supplier<? extends Item> key, String result, String text) {
         this.add(key.get().getDescriptionId() + "." + result, text);
     }
 }

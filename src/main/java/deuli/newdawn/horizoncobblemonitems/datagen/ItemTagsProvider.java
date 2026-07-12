@@ -26,7 +26,7 @@ public class ItemTagsProvider extends net.minecraft.data.tags.ItemTagsProvider {
                 .addTag(HCIItemTags.SILVER_BOTTLE_CAPS)
                 .addTag(HCIItemTags.OBSIDIAN_BOTTLE_CAPS);
 
-        tag(HCIItemTags.RANDOM_SILVER_BOTTLE_CAPS)
+        tag(HCIItemTags.SPECIFIC_SILVER_BOTTLE_CAPS)
                 .add(
                         HCIItems.HEALTH_BOTTLE_CAP.get(),
                         HCIItems.MIGHTY_BOTTLE_CAP.get(),
@@ -38,9 +38,9 @@ public class ItemTagsProvider extends net.minecraft.data.tags.ItemTagsProvider {
 
         tag(HCIItemTags.SILVER_BOTTLE_CAPS)
                 .add(HCIItems.SILVER_BOTTLE_CAP.get())
-                .addTag(HCIItemTags.RANDOM_SILVER_BOTTLE_CAPS);
+                .addTag(HCIItemTags.SPECIFIC_SILVER_BOTTLE_CAPS);
 
-        tag(HCIItemTags.RANDOM_OBSIDIAN_BOTTLE_CAPS)
+        tag(HCIItemTags.SPECIFIC_OBSIDIAN_BOTTLE_CAPS)
                 .add(
                         HCIItems.SICKLY_BOTTLE_CAP.get(),
                         HCIItems.WEAK_BOTTLE_CAP.get(),
@@ -52,7 +52,7 @@ public class ItemTagsProvider extends net.minecraft.data.tags.ItemTagsProvider {
 
         tag(HCIItemTags.OBSIDIAN_BOTTLE_CAPS)
                 .add(HCIItems.OBSIDIAN_BOTTLE_CAP.get())
-                .addTag(HCIItemTags.RANDOM_OBSIDIAN_BOTTLE_CAPS);
+                .addTag(HCIItemTags.SPECIFIC_OBSIDIAN_BOTTLE_CAPS);
 
         tag(HCIItemTags.CANDIES)
                 .add(

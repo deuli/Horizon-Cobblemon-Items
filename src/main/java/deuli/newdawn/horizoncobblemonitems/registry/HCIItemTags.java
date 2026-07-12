@@ -8,9 +8,9 @@ import net.minecraft.world.item.Item;
 
 public class HCIItemTags {
     public static final TagKey<Item> BOTTLE_CAPS = createTag("bottle_caps");
-    public static final TagKey<Item> RANDOM_SILVER_BOTTLE_CAPS = createTag("random_silver_bottle_caps");
+    public static final TagKey<Item> SPECIFIC_SILVER_BOTTLE_CAPS = createTag("specific_silver_bottle_caps");
     public static final TagKey<Item> SILVER_BOTTLE_CAPS = createTag("silver_bottle_caps");
-    public static final TagKey<Item> RANDOM_OBSIDIAN_BOTTLE_CAPS = createTag("random_obsidian_bottle_caps");
+    public static final TagKey<Item> SPECIFIC_OBSIDIAN_BOTTLE_CAPS = createTag("specific_obsidian_bottle_caps");
     public static final TagKey<Item> OBSIDIAN_BOTTLE_CAPS = createTag("obsidian_bottle_caps");
 
     public static final TagKey<Item> CANDIES = createTag("candies");
