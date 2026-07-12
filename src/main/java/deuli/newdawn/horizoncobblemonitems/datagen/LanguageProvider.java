@@ -24,6 +24,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         add("itemGroup.horizoncobblemonitems.friendship", "Friendship Items");
         add("itemGroup.horizoncobblemonitems.other", "Other");
 
+        add("item.infinite", "Infinite");
+
         addItem(HCIItems.GOLDEN_BOTTLE_CAP, "Golden Bottle Cap");
         tooltip(HCIItems.GOLDEN_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %s");
         addItem(HCIItems.VOID_BOTTLE_CAP, "Void Bottle Cap");
