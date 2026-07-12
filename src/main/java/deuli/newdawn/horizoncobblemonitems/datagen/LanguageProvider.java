@@ -24,6 +24,7 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         add("itemGroup.horizoncobblemonitems.riding", "Riding Items");
         add("itemGroup.horizoncobblemonitems.moves", "Move Items");
         add("itemGroup.horizoncobblemonitems.friendship", "Friendship Items");
+        add("itemGroup.horizoncobblemonitems.pokemon", "Pokémon Items");
         add("itemGroup.horizoncobblemonitems.other", "Other");
 
 
@@ -70,6 +71,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
 
         addItem(HCIItems.BASKET_BALL, "Baskét Ball");
         tooltip(HCIItems.BASKET_BALL, "Turns the Pokémon into a shiny Pokémon");
+        addItem(HCIItems.EVIL_BASKET_BALL, "Evil Baskét Ball");
+        tooltip(HCIItems.EVIL_BASKET_BALL, "Turns a shiny Pokémon into a regular Pokémon");
 
         addItem(HCIItems.DEVOLUTION_SPRAY, "Devolution Spray");
         tooltip(HCIItems.DEVOLUTION_SPRAY, "Devolves a Pokémon into their previous evolution");

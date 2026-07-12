@@ -137,15 +137,22 @@ public class HCICreativeModeTabs {
         );
 
         FancyTabSections.addSection(HorizonCobblemonItems.rl("horizon_cobblemon_items_tab"),
-                new SectionColored(HorizonCobblemonItems.rl("other"))
-                        .setTitle(Component.translatable("itemGroup.horizoncobblemonitems.other"))
+                new SectionColored(HorizonCobblemonItems.rl("pokemon"))
+                        .setTitle(Component.translatable("itemGroup.horizoncobblemonitems.pokemon"))
                         .setBannerColor(new Color(0x141414).getRGB())
                         .setTextColor(new Color(0xFCDA31).getRGB())
                         .add(HCIItems.BASKET_BALL)
+                        .add(HCIItems.EVIL_BASKET_BALL)
                         .add(HCIItems.DEVOLUTION_SPRAY)
                         .add(HCIItems.GENDER_CHANGE_POTION)
                         .add(HCIItems.MAGIC_8_BALL)
                         .add(HCIItems.BLACK_HOLE_PONIGIRI)
+        );
+
+        FancyTabSections.addSection(HorizonCobblemonItems.rl("horizon_cobblemon_items_tab"),
+                new SectionColored(HorizonCobblemonItems.rl("other"))
+                        .setTitle(Component.translatable("itemGroup.horizoncobblemonitems.other"))
+                        .setBannerColor(new Color(0xFC5939).getRGB())
                         .add(HCIItems.PORYPHONE)
                         .add(HCIItems.PORYPHONE2)
                         .add(HCIItems.DAWN_BALL)

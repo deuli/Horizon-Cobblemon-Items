@@ -1,0 +1,6 @@
+{
+    "parent": "horizoncobblemonitems:block/ball",
+	"textures": {
+		"0": "horizoncobblemonitems:block/evil_basket_ball"
+	}
+}

@@ -11,15 +11,17 @@ import net.minecraft.world.item.Rarity;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class BasketBallItem extends AbstractHorizonItem {
+public class ShinyItem extends AbstractHorizonItem {
+    private final boolean shiny;
 
-    public BasketBallItem() {
-        super(Rarity.EPIC);
+    public ShinyItem(Rarity rarity, boolean shiny) {
+        super(rarity);
+        this.shiny = shiny;
     }
 
     @Override
     public boolean canUseOnPokemon(@NotNull ItemStack stack, @NotNull Pokemon pokemon) {
-        return !pokemon.getShiny();
+        return shiny && !pokemon.getShiny() || !shiny && pokemon.getShiny();
     }
 
     @Override
@@ -28,8 +30,8 @@ public class BasketBallItem extends AbstractHorizonItem {
             return InteractionResultHolder.fail(itemStack);
         }
 
-        if (!pokemon.getShiny())
-            pokemon.setShiny(true);
+        if (shiny && !pokemon.getShiny() || !shiny && pokemon.getShiny())
+            pokemon.setShiny(shiny);
 
         Util.consume(itemStack, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();

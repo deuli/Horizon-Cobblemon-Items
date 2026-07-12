@@ -37,7 +37,8 @@ public class HCIItems {
 
     public static final DeferredItem<Item> WOODEN_BOTTLE_CAP = ITEMS.register("wooden_bottle_cap", () -> new WoodenBottleCapItem(Stats.Companion.getPERMANENT()));
 
-    public static final DeferredItem<Item> BASKET_BALL = ITEMS.register("basket_ball", BasketBallItem::new);
+    public static final DeferredItem<Item> BASKET_BALL = ITEMS.register("basket_ball", () -> new ShinyItem(Rarity.EPIC, true));
+    public static final DeferredItem<Item> EVIL_BASKET_BALL = ITEMS.register("evil_basket_ball", () -> new ShinyItem(Rarity.UNCOMMON, false));
 
     public static final DeferredItem<Item> DEVOLUTION_SPRAY = ITEMS.register("devolution_spray", DevolutionSprayItem::new);
 
