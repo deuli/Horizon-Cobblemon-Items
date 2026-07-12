@@ -222,6 +222,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
         addTag(() -> HCIItemTags.HIDDEN_MACHINES, "Hidden Machines");
         addTag(() -> HCIItemTags.IV_ITEMS, "IV Items");
         addTag(() -> HCIItemTags.EV_ITEMS, "EV Items");
+        addTag(() -> HCIItemTags.BASKET_BALLS, "Baskét Balls");
+        addTag(() -> HCIItemTags.POKEMON_ITEMS, "Pokémon Items");
     }
 
     private void tooltip(Supplier<? extends Item> key, String tooltip) {

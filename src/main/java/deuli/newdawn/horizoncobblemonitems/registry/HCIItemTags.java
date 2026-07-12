@@ -38,6 +38,9 @@ public class HCIItemTags {
     public static final TagKey<Item> IV_ITEMS = createTag("iv_items");
     public static final TagKey<Item> EV_ITEMS = createTag("ev_items");
 
+    public static final TagKey<Item> BASKET_BALLS = createTag("basket_balls");
+    public static final TagKey<Item> POKEMON_ITEMS = createTag("pokemon_items");
+
     private static TagKey<Item> createTag(String path) {
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(HorizonCobblemonItems.MOD_ID, path));
     }

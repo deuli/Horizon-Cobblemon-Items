@@ -158,5 +158,20 @@ public class ItemTagsProvider extends net.minecraft.data.tags.ItemTagsProvider {
         tag(HCIItemTags.EV_ITEMS)
                 .addTag(HCIItemTags.BERRIES)
                 .addTag(HCIItemTags.FEATHERS);
+
+        tag(HCIItemTags.BASKET_BALLS)
+                .add(
+                        HCIItems.BASKET_BALL.get(),
+                        HCIItems.EVIL_BASKET_BALL.get()
+                );
+
+        tag(HCIItemTags.POKEMON_ITEMS)
+                .add(
+                        HCIItems.DEVOLUTION_SPRAY.get(),
+                        HCIItems.GENDER_CHANGE_POTION.get(),
+                        HCIItems.MAGIC_8_BALL.get(),
+                        HCIItems.BLACK_HOLE_PONIGIRI.get()
+                )
+                .addTag(HCIItemTags.BASKET_BALLS);
     }
 }
