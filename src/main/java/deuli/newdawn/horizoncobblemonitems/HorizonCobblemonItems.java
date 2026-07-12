@@ -6,6 +6,7 @@ import deuli.newdawn.horizoncobblemonitems.registry.Aliases;
 import deuli.newdawn.horizoncobblemonitems.registry.HCICreativeModeTabs;
 import deuli.newdawn.horizoncobblemonitems.registry.HCIDataComponentTypes;
 import deuli.newdawn.horizoncobblemonitems.registry.HCIItems;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
@@ -19,8 +20,12 @@ public class HorizonCobblemonItems {
     public HorizonCobblemonItems(IEventBus modEventBus) {
         HCIItems.ITEMS.register(modEventBus);
         Aliases.addAliases();
-        HCICreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        HCICreativeModeTabs.register(modEventBus);
         HCIDataComponentTypes.DATA_COMPONENT_TYPES.register(modEventBus);
         NeoForge.EVENT_BUS.addListener(GiveDawnBallCommand::register);
+    }
+
+    public static ResourceLocation rl (String s) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, s);
     }
 }

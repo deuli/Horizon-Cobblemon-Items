@@ -15,6 +15,14 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
     @Override
     protected void addTranslations() {
         add("itemGroup.horizoncobblemonitems", "Horizon Cobblemon Items");
+        add("itemGroup.horizoncobblemonitems.bottle_caps", "Bottle Caps");
+        add("itemGroup.horizoncobblemonitems.carats", "Carats");
+        add("itemGroup.horizoncobblemonitems.ev", "EV Items");
+        add("itemGroup.horizoncobblemonitems.level", "Level Items");
+        add("itemGroup.horizoncobblemonitems.riding", "Riding Items");
+        add("itemGroup.horizoncobblemonitems.moves", "Move Items");
+        add("itemGroup.horizoncobblemonitems.friendship", "Friendship Items");
+        add("itemGroup.horizoncobblemonitems.other", "Other");
 
         addItem(HCIItems.GOLDEN_BOTTLE_CAP, "Golden Bottle Cap");
         tooltip(HCIItems.GOLDEN_BOTTLE_CAP, "Sets all of the Pokémon's effective IV stats to %s");

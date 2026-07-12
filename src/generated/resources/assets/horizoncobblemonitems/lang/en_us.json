@@ -146,5 +146,13 @@
   "item.horizoncobblemonitems.wooden_bottle_cap.tooltip": "Randomizes all of the Pokémon's effective IV stats",
   "item.horizoncobblemonitems.yellow_carat": "Yellow Carat",
   "item.horizoncobblemonitems.yellow_carat.tooltip": "Transforms a Pokémon's effective HP IV stat into their actual IV HP stat",
-  "itemGroup.horizoncobblemonitems": "Horizon Cobblemon Items"
+  "itemGroup.horizoncobblemonitems": "Horizon Cobblemon Items",
+  "itemGroup.horizoncobblemonitems.bottle_caps": "Bottle Caps",
+  "itemGroup.horizoncobblemonitems.carats": "Carats",
+  "itemGroup.horizoncobblemonitems.ev": "EV Items",
+  "itemGroup.horizoncobblemonitems.friendship": "Friendship Items",
+  "itemGroup.horizoncobblemonitems.level": "Level Items",
+  "itemGroup.horizoncobblemonitems.moves": "Move Items",
+  "itemGroup.horizoncobblemonitems.other": "Other",
+  "itemGroup.horizoncobblemonitems.riding": "Riding Items"
 }
