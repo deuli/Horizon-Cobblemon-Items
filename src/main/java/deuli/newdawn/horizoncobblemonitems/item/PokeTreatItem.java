@@ -37,7 +37,7 @@ public class PokeTreatItem extends AbstractHorizonItem {
         if (pokemon.getFriendship() != friendshipSetAmount)
             pokemon.setFriendship(friendshipSetAmount, true);
 
-        itemStack.consume(1, serverPlayer);
+        Util.consume(itemStack, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)
             entity.playSound(CobblemonSounds.MOCHI_USE, 1F, 1F);

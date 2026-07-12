@@ -62,7 +62,7 @@ public class EVSetItem extends AbstractHorizonItem {
             }
         });
 
-        itemStack.consume(1, serverPlayer);
+        Util.consume(itemStack, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)
             entity.playSound(CobblemonSounds.MEDICINE_FEATHER_USE, 1F, 1F);

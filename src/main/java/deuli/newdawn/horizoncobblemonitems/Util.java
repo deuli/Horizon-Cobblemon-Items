@@ -1,8 +1,10 @@
 package deuli.newdawn.horizoncobblemonitems;
 
-import deuli.newdawn.horizoncobblemonitems.item.DawnBallItem;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -20,5 +22,10 @@ public class Util {
 
     public static @NotNull String getTooltipKey(Item item, String sub) {
         return item.getDescriptionId() + ".tooltip." + sub;
+    }
+
+    public static void consume(ItemStack itemStack, Player player) {
+        if (!itemStack.getComponents().has(DataComponents.UNBREAKABLE))
+            itemStack.consume(1, player);
     }
 }

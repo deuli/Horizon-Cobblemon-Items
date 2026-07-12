@@ -40,7 +40,7 @@ public class EVDecreaseItem extends AbstractHorizonItem {
             PokemonEntity entity = pokemon.getEntity();
             if (entity != null)
                 entity.playSound(CobblemonSounds.MEDICINE_FEATHER_USE, 1F, 1F);
-            itemStack.consume(1, serverPlayer);
+            Util.consume(itemStack, serverPlayer);
             return InteractionResultHolder.success(itemStack);
         } else
             return InteractionResultHolder.fail(itemStack);

@@ -48,7 +48,7 @@ public class BottleCapItem extends AbstractHorizonItem {
             }
         });
 
-        itemStack.consume(1, serverPlayer);
+        Util.consume(itemStack, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)
             entity.playSound(CobblemonSounds.MEDICINE_PILLS_USE, 1F, 1F);

@@ -3,6 +3,7 @@ package deuli.newdawn.horizoncobblemonitems.item;
 import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import deuli.newdawn.horizoncobblemonitems.Util;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.item.ItemStack;
@@ -30,7 +31,7 @@ public class BasketBallItem extends AbstractHorizonItem {
         if (!pokemon.getShiny())
             pokemon.setShiny(true);
 
-        itemStack.consume(1, serverPlayer);
+        Util.consume(itemStack, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)
             entity.playSound(CobblemonSounds.ITEM_USE, 1F, 1F);

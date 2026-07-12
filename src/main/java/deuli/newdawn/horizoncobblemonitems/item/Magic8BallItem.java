@@ -4,6 +4,7 @@ import com.cobblemon.mod.common.CobblemonSounds;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.item.PokeBallItem;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import deuli.newdawn.horizoncobblemonitems.Util;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.item.ItemStack;
@@ -36,7 +37,7 @@ public class Magic8BallItem extends AbstractHorizonItem {
         if (canSwapBall(offhandItem, pokemon))
             pokemon.setCaughtBall(((PokeBallItem) offhandItem.getItem()).getPokeBall());
 
-        itemStack.consume(1, serverPlayer);
+        Util.consume(itemStack, serverPlayer);
         offhandItem.consume(1, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)

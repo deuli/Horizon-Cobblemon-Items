@@ -57,7 +57,7 @@ public class PoryphoneItem extends Item {
 
                     level.playSound(null, player.getOnPos(), CobblemonSounds.POKEDEX_OPEN, SoundSource.PLAYERS, 0.2F, 1);
                     player.getCooldowns().addCooldown(stackInHand.getItem(), 20);
-                    stackInHand.consume(1, player);
+                    Util.consume(stackInHand, player);
                     offHand.consume(1, player);
                 }
             }

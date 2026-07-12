@@ -37,7 +37,7 @@ public class UncommonCandyItem extends AbstractHorizonItem {
         if (pokemon.getLevel() > 1)
             pokemon.setLevel(pokemon.getLevel() - levelDecreaseAmount);
 
-        itemStack.consume(1, serverPlayer);
+        Util.consume(itemStack, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)
             entity.playSound(CobblemonSounds.MEDICINE_CANDY_USE, 1F, 1F);

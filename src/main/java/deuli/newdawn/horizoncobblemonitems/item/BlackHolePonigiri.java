@@ -37,7 +37,7 @@ public class BlackHolePonigiri extends AbstractHorizonItem {
         if (pokemon.getCurrentFullness() != fullnessSetAmount)
             pokemon.setCurrentFullness(fullnessSetAmount);
 
-        itemStack.consume(1, serverPlayer);
+        Util.consume(itemStack, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)
             entity.playSound(CobblemonSounds.BERRY_EAT, 1F, 1F);

@@ -3,6 +3,7 @@ package deuli.newdawn.horizoncobblemonitems.item;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Gender;
 import com.cobblemon.mod.common.pokemon.Pokemon;
+import deuli.newdawn.horizoncobblemonitems.Util;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionResultHolder;
@@ -30,7 +31,7 @@ public class GenderChangePotionItem extends AbstractHorizonItem {
         if (pokemon.getGender() != Gender.GENDERLESS)
             pokemon.setGender(pokemon.getGender() == Gender.MALE ? Gender.FEMALE : Gender.MALE);
 
-        itemStack.consume(1, serverPlayer);
+        Util.consume(itemStack, serverPlayer);
         PokemonEntity entity = pokemon.getEntity();
         if (entity != null)
             entity.playSound(SoundEvents.HONEY_DRINK, 1F, 1F);

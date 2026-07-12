@@ -32,6 +32,7 @@ public class BattleItem extends Item {
         BattleBuilder.INSTANCE.pvp1v1(attackerPlayer, targetPlayer)
                 .ifSuccessful(pokemonBattle -> {
                     attackerPlayer.getCooldowns().addCooldown(this, 2000);
+                    Util.consume(stack, attackerPlayer);
                     return Unit.INSTANCE;
                 })
                 .ifErrored(erroredBattleStart -> {
