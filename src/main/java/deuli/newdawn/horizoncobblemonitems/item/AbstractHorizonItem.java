@@ -42,7 +42,7 @@ public abstract class AbstractHorizonItem extends CobblemonItem implements Pokem
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level world, @NotNull Player player, @NotNull InteractionHand hand) {
         if (player instanceof ServerPlayer serverPlayer)
-            return use(serverPlayer, player.getItemInHand(hand));
+            return use(serverPlayer, player.getItemInHand(hand), false);
 
         return InteractionResultHolder.success(player.getItemInHand(hand));
     }
